@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-lang="pt">Sobre mim - Matheus O. Malaquias</title>
+  <title data-lang="en" style="display:none;">About me - Matheus O. Malaquias</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="./Styles/CV.css">
+
+  <style>
+    /* Centralizar o seletor de idioma */
+    .language-switch {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .language-switch button {
+      background: none;
+      border: 1px solid #ccc;
+      margin: 0 5px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: 600;
+      color: white;
+    }
+
+    .language-switch button:hover {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="./Images/Malaquias.png" alt="Matheus O. Malaquias">
+    <h1>Matheus O. Malaquias</h1>
+
+    <!-- Seletor de idioma -->
+    <div class="language-switch">
+      <button onclick="setLanguage('pt')">🇧🇷 PT</button>
+      <button onclick="setLanguage('en')">🇺🇸 EN</button>
+    </div>
+
+    <br>
+
+    <!-- Menu de navegação -->
+    <nav class="header__navbar">
+      <a href="CV.html" data-lang="pt">CV</a>
+      <a href="CV.html" data-lang="en" style="display:none;">Resume</a>
+
+      <a href="CVAboutMe.html" data-lang="pt">Sobre mim</a>
+      <a href="CVAboutMe.html" data-lang="en" style="display:none;">About me</a>
+
+      <a href="CVProjects.html" data-lang="pt">Projetos</a>
+      <a href="CVProjects.html" data-lang="en" style="display:none;">Projects</a>
+    </nav>
+  </header>
+
+  <!-- Seção principal -->
+  <section class="about-main">
+    <h2 data-lang="pt">Quem sou eu?</h2>
+    <h2 data-lang="en" style="display:none;">Who am I?</h2>
+
+    <p data-lang="pt">
+      Meu nome é Matheus Otávio Malaquias, sou de Minas Gerais e estou cursando <br>
+      Desenvolvimento de Software na Brigham Young University - Idaho (BYU-I).
+    </p>
+
+    <br>
+
+    <p data-lang="pt">
+      Sempre fui curioso sobre como a tecnologia transforma o mundo, e essa curiosidade me levou à programação. <br>
+      Ainda estou no início da minha jornada, mas já venho criando projetos próprios e explorando novas <br>
+      linguagens e ferramentas.
+    </p>
+
+    <br>
+
+    <p data-lang="pt">
+      Tenho estudado <strong>Python</strong>, <strong>HTML</strong>, <strong>CSS</strong> e <strong>C#</strong>,
+      e comecei a aprender <strong>JavaScript</strong> com o apoio do ChatGPT. <br>
+      Meu objetivo é crescer como desenvolvedor e transformar ideias em soluções úteis e criativas.
+    </p>
+
+    <p data-lang="en" style="display:none;">
+      My name is Matheus Otávio Malaquias, I'm from Brazil and currently studying <br> 
+      Software Development at Brigham Young University - Idaho (BYU-I).
+    </p>
+
+    <br>
+
+    <p data-lang="en" style="display:none;">
+      I've always been curious about how technology transforms the world, and that curiosity led me to programming. <br>
+      I'm still at the beginning of my journey, but I’ve been creating personal projects and exploring new <br>
+      languages and tools.
+    </p>
+
+    <br>
+
+    <p data-lang="en" style="display:none;">
+      I’ve studied <strong>Python</strong>, <strong>HTML</strong>, <strong>CSS</strong>, and <strong>C#</strong>,
+      and started learning <strong>JavaScript</strong> with the help of ChatGPT. <br>
+      My goal is to grow as a developer and turn ideas into useful and creative solutions.
+    </p>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <!-- Linguagens -->
+    <div class="tech-footer">
+      <div class="tech-icons">
+        <i class="devicon-python-plain colored"></i>
+        <span>Python</span>
+      </div>
+      <div class="tech-icons">
+        <i class="devicon-html5-plain colored"></i>
+        <span>HTML</span>
+      </div>
+      <div class="tech-icons">
+        <i class="devicon-css3-plain colored"></i>
+        <span>CSS</span>
+      </div>
+      <div class="tech-icons">
+        <i class="devicon-csharp-plain colored"></i>
+        <span>C#</span>
+      </div>
+    </div>
+
+    <div class="social-links">
+        <a href="https://github.com/MatheusMalaquias" target="_blank" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 24 24">
+          <path d="M12 .5C5.648.5.5 5.648.5 12c0 5.086 3.292 9.385 7.865 10.907.575.106.785-.25.785-.555 
+          0-.274-.01-1.002-.015-1.966-3.2.696-3.878-1.542-3.878-1.542-.523-1.327-1.277-1.68-1.277-1.68-1.043-.713.08-.698.08-.698 
+          1.152.081 1.758 1.183 1.758 1.183 1.026 1.756 2.69 1.249 3.344.955.104-.743.402-1.25.73-1.537-2.553-.29-5.237-1.277-5.237-5.682 
+          0-1.255.448-2.28 1.182-3.085-.119-.289-.512-1.456.112-3.038 0 0 .963-.308 3.157 1.178a11.02 11.02 0 0 1 2.873-.386c.975.004 
+          1.956.132 2.873.386 2.192-1.486 3.153-1.178 3.153-1.178.626 1.582.233 2.749.115 3.038.737.805 1.18 1.83 1.18 3.085 
+          0 4.415-2.688 5.389-5.252 5.673.414.356.782 1.063.782 2.141 
+          0 1.543-.014 2.787-.014 3.168 0 .308.207.667.79.554C20.713 21.38 24 17.082 24 12c0-6.352-5.148-11.5-12-11.5Z"/>
+        </svg>
+      </a>
+
+      <a href="https://www.linkedin.com/in/matheus-otavio-malaquias/" target="_blank" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 24 24">
+          <path d="M20.451 20.451h-3.554v-5.569c0-1.328-.027-3.039-1.852-3.039-1.853 
+          0-2.137 1.447-2.137 2.942v5.666H9.354V9h3.414v1.561h.049c.476-.9 
+          1.637-1.852 3.368-1.852 3.599 0 4.263 2.369 4.263 5.455v6.287ZM5.337 
+          7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124ZM7.119 
+          20.451H3.554V9h3.565v11.451ZM22.225 0H1.771C.792 0 0 .774 
+          0 1.729v20.542C0 23.226.792 24 1.771 
+          24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 
+          .774 23.2 0 22.222 0h.003Z"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Script de idioma -->
+  <script src="./Scripts/language.js"></script>
+
+  <!-- Botão de modo claro/escuro -->
+  <button id="theme-toggle" class="theme-toggle">🌙</button>
+  <script src="Scripts/Theme.js"></script>
+</body>
+</html>

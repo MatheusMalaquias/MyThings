@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    font-family: 'Inter', system-ui, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente */
+    text-align: center;
+}
+
+body {
+    display: flex;
+    align-items: center;    /* centraliza verticalmente */
+    justify-content: center; /* centraliza horizontalmente */
+    background: #000;
+    color: white;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;  /* texto em cima, botão embaixo */
+    align-items: center;
+    gap: 20px;               /* distância entre texto e botão */
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* centraliza horizontal */
+    justify-content: center;   /* centraliza vertical dentro da seção */
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1, h2, p, button {
+    margin: 10px 0;            /* espaço entre elementos */
+    text-align: center;         /* garante centralização do texto */
+}
+
+button {
+    background: #fff;
+    color: #ff5f7e;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 28px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente se quiser */
+    height: 100vh;           /* ocupa a altura da tela para centralização total */
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Slideshow Section */
+#slideshow-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* centraliza horizontal */
+    justify-content: center;  /* centraliza vertical */
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Slideshow Container */
+#slideshow {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(255, 159, 178, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#slideshow img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 16px;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out, transform 6s ease-in-out;
+}
+
+#slideshow img.active {
+    opacity: 1;
+}
+
+#slideshow img.zoom-in {
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+#slideshow img.zoom-out {
+    transform: translate(-50%, -50%) scale(0.95);
+}
+
+/* Caption */
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    font-size: 18px;
+    color: #ffe6f0;
+    text-align: center;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Play Button */
+#play-btn {
+    display: block;
+    margin: 20px auto 0 auto; /* 20px em cima, auto nas laterais */
+    padding: 12px 28px;
+    border-radius: 50px;
+    border: none;
+    background: #fff;
+    color: #ff5f7e;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#play-btn:hover {
+    transform: scale(1.05);
+}
+
+.nav-btn {
+    position: fixed;           /* fixa na tela, mesmo ao rolar */
+    top: 50%;                  /* meio vertical da tela */
+    transform: translateY(-50%); /* centraliza verticalmente */
+    font-size: 48px;
+    color: #fff;
+    background: rgba(0,0,0,0.3); /* opcional: fundo leve */
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+#prev {
+    left: 20px;   /* distância da borda esquerda */
+}
+
+#next {
+    right: 20px;  /* distância da borda direita */
+}
+
+.nav-btn:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .nav-btn {
+        font-size: 36px;
+        width: 50px;
+        height: 50px;
+        left: 10px;
+        right: 10px;
+    }
+}

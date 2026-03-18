@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="./Styles/Julio'sStamparia.css">
+  <title>Personalizar Peça de Roupa</title>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <img src="./Images/Julio's Logo.png" alt="Julio's Stamparia Logo" class="site-logo" />
+  </header>
+
+  <div class="container">
+    
+    <!-- Parte de personalização -->
+    <div class="personalizacao">
+      <h2>Personalize sua Peça</h2>
+      
+      <!-- Upload de imagem -->
+      <input type="file" id="imageUpload" accept="image/*"/>
+
+      <!-- Área visual da peça com imagem e personalização -->
+      <div class="shirt-container">
+        <img src="./Images/camiseta-frente.png" alt="Peça de roupa" class="shirt" id="shirtImage"/>
+        <div class="overlay-image" id="overlay"></div>
+      </div>
+    </div>
+
+    <!-- Parte do formulário -->
+    <form class="pedido" action="https://formspree.io/f/SEU_ID_AQUI" method="POST">
+      <input type="text" name="nome" placeholder="Seu nome" required />
+      <input type="email" name="email" placeholder="Seu e-mail" required />
+
+      <!-- Seletor de tipo de peça -->
+      <select id="tipo-peca">
+        <option value="camiseta">Camiseta</option>
+        <option value="camisa">Camisa</option>
+        <option value="blusa">Blusa de Frio</option>
+      </select>
+
+      <!-- Seletor de frente ou costas -->
+      <select id="lado-peca">
+        <option value="frente">Frente</option>
+        <option value="costas">Costas</option>
+      </select>
+
+      <select name="genero" required>
+        <option value="">Gênero</option>
+        <option value="Masculina">Masculina</option>
+        <option value="Feminina">Feminina</option>
+      </select>
+
+      <select name="tamanho" required>
+        <option value="">Selecione o tamanho</option>
+        <option value="P">P</option>
+        <option value="M">M</option>
+        <option value="G">G</option>
+        <option value="GG">GG</option>
+      </select>
+
+      <select name="tecido" required>
+        <option value="">Selecione o tecido</option>
+        <option value="Algodão">Algodão</option>
+        <option value="Poliéster">Poliéster</option>
+        <option value="Dry Fit">Dry Fit</option>
+      </select>
+
+      <select name="cor" required>
+        <option value="">Selecione a cor da peça</option>
+        <option value="Branca">Branca</option>
+        <option value="Preta">Preta</option>
+        <option value="Vermelha">Vermelha</option>
+        <option value="Azul">Azul</option>
+      </select>
+
+      <textarea name="mensagem" placeholder="Detalhes do pedido" rows="4" required></textarea>
+      <button type="submit" class="button-liquid">Enviar Pedido</button>
+    </form>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+  <script>
+    const overlay = document.getElementById('overlay');
+    const imageUpload = document.getElementById('imageUpload');
+    const tipoPeca = document.getElementById('tipo-peca');
+    const ladoPeca = document.getElementById('lado-peca');
+    const shirtImage = document.getElementById('shirtImage');
+
+    const atualizarImagem = () => {
+      const tipo = tipoPeca.value;
+      const lado = ladoPeca.value;
+      shirtImage.src = `./Images/${tipo}-${lado}.png`;
+    };
+
+    tipoPeca.addEventListener('change', atualizarImagem);
+    ladoPeca.addEventListener('change', atualizarImagem);
+
+    imageUpload.addEventListener('change', function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          overlay.style.backgroundImage = `url(${e.target.result})`;
+          overlay.style.backgroundSize = 'contain';
+          overlay.style.backgroundRepeat = 'no-repeat';
+          overlay.style.backgroundPosition = 'center';
+        }
+        reader.readAsDataURL(file);
+      }
+    });
+
+    interact('#overlay')
+      .draggable({
+        listeners: {
+          move (event) {
+            const target = event.target;
+            const x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
+            const y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+            target.style.transform = `translate(${x}px, ${y}px)`;
+            target.setAttribute('data-x', x);
+            target.setAttribute('data-y', y);
+          }
+        }
+      })
+      .resizable({
+        edges: { left: true, right: true, bottom: true, top: true },
+        listeners: {
+          move (event) {
+            let { x, y } = event.target.dataset;
+
+            x = parseFloat(x) || 0;
+            y = parseFloat(y) || 0;
+
+            event.target.style.width = `${event.rect.width}px`;
+            event.target.style.height = `${event.rect.height}px`;
+
+            x += event.deltaRect.left;
+            y += event.deltaRect.top;
+
+            event.target.style.transform = `translate(${x}px, ${y}px)`;
+            event.target.dataset.x = x;
+            event.target.dataset.y = y;
+          }
+        },
+        modifiers: [
+          interact.modifiers.restrictSize({
+            min: { width: 50, height: 50 },
+            max: { width: 300, height: 300 }
+          })
+        ],
+        inertia: true
+      });
+  </script>
+</body>
+</html>

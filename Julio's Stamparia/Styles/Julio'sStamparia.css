@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background-color: #f0f0f0; /* Cor de fundo opcional */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+img {
+  max-width: 150px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+input {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.button {
+  position: relative;
+  padding: 0.6rem 1rem;
+  border: none;
+  background-color: #0077ff;
+  color: white;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.button .liquid {
+  display: none; /* Placeholder do efeito */
+}
+
+.button:hover {
+  background-color: #005fcc;
+}
+
+a.button {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.button-liquid {
+  position: relative;
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: #0077ff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.button-liquid::before,
+.button-liquid::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(47, 0, 255, 0.2);
+  border-radius: 45%;
+  animation: liquid-move 5s linear infinite;
+  z-index: 0;
+}
+
+.button-liquid::after {
+  animation-delay: -2.5s; /* cria efeito de onda dupla */
+}
+
+@keyframes liquid-move {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.button-liquid:hover {
+  color: #fff;
+  background: #005fcc;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.personalizacao,
+.pedido {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.personalizacao {
+  display: flex;
+  flex-direction: column;      /* elementos um embaixo do outro */
+  justify-content: center;     /* centraliza verticalmente */
+  align-items: center;         /* centraliza horizontalmente */
+  text-align: center;          /* centraliza o texto */
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.shirt-container {
+  position: relative;
+  display: flex;
+  justify-content: center;     /* centraliza a camisa */
+  align-items: center;         /* centraliza no eixo vertical */
+  width: 100%;
+  max-width: 300px;
+  margin-top: 1rem;
+}
+
+.shirt {
+  width: 100%;
+  display: block;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 50%;    /* move para o centro vertical */
+  left: 50%;   /* move para o centro horizontal */
+  transform: translate(-50%, -50%); /* centraliza de fato */
+  width: 100px;
+  height: 100px;
+}
+
+/* ===== Cabeçalho e logo ===== */
+.site-header {
+  position: absolute;   /* Fixa no canto sem ocupar espaço do layout */
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.site-logo {
+  max-width: 120px;
+  height: auto;
+  cursor: pointer;
+}

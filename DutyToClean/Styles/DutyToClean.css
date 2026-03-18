@@ -1,0 +1,46 @@
+:root {
+  --red: #E32636;
+  --blue: #0A1E40;
+  --light: #f7f7f7;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.btn-red {
+  background: var(--red);
+  color: white;
+  transition: 0.2s;
+}
+.btn-red:hover {
+  background: #b81e2b;
+}
+.card {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f2f4f8;
+  color: #0A1E40;
+}
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+header img {
+  max-width: 160px;
+  height: auto;
+  border-radius: 0; /* remove círculo da logo */
+}
+section {
+  background: #fff;
+  border-radius: 12px;
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}

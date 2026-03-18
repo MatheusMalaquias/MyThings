@@ -1,0 +1,273 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.8;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: #222;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-bottom: 1rem;
+}
+
+header nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #00aaff;
+}
+
+/* ===== SECTION ===== */
+section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.cv__section {
+  margin-bottom: 40px;
+}
+
+/* ===== CONTACT INFO ===== */
+.contact-info {
+  text-align: center;
+  background: #eee;
+  padding: 12px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  margin: auto;
+  font-weight: 500;
+}
+
+.contact-info a {
+  color: #222;
+  margin: 0 8px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #0073e6;
+  text-decoration: underline;
+}
+
+/* ===== EDUCATION ===== */
+.education-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  border-left: 3px solid #222;
+  padding-left: 15px;
+}
+
+.education-details .school {
+  font-weight: 600;
+}
+
+.education-details .degree {
+  font-style: italic;
+  color: #555;
+}
+
+.education-meta {
+  text-align: right;
+  padding-left: 20px;
+  white-space: nowrap;
+  color: #666;
+}
+
+/* ===== EXPERIENCE ===== */
+.job-item {
+  margin-bottom: 25px;
+  border-left: 3px solid #222;
+  padding-left: 15px;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.job-details {
+  flex: 1;
+  font-weight: 600;
+}
+
+.job-details .company {
+  font-weight: normal;
+  color: #444;
+}
+
+.job-meta {
+  text-align: right;
+  padding-left: 20px;
+  white-space: nowrap;
+  color: #666;
+}
+
+.job-description {
+  margin-top: 8px;
+  font-size: 0.95em;
+  color: #444;
+}
+
+/* ===== SKILLS ===== */
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.skills-container > div {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.skills-container ul {
+  padding-left: 20px;
+  margin-top: 8px;
+  color: #444;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  font-size: 0.9em;
+}
+
+footer a {
+  margin: 0 10px;
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #00aaff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .education-item,
+  .job-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .education-meta,
+  .job-meta {
+    text-align: left;
+    padding-left: 0;
+    margin-top: 5px;
+  }
+
+  .skills-container {
+    flex-direction: column;
+  }
+}
+
+/* Rodapé */
+.site-footer {
+  background-color: #111;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Ícones das linguagens */
+.tech-footer {
+  display: flex;
+  flex-wrap: wrap;   /* permite quebrar linha */
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.tech-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  transition: transform 0.2s ease-in-out; /* animação ao passar o mouse */
+}
+
+.tech-icons i {
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+/* Estilo do botão */
+.theme-toggle {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  background: var(--toggle-bg, #eee);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Tema escuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+body.dark-mode a {
+  color: #9dc6ff;
+}
+
+body.dark-mode header, 
+body.dark-mode footer {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .theme-toggle {
+  --toggle-bg: #333;
+  color: #fff;
+}

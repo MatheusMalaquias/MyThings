@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PortuInglês - Module 1</title>
+  <meta name="description" content="..." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./Styles/DutyToClean.css">
+
+  <!-- Fonte Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-white text-[var(--blue)] antialiased">
+  <main class="min-h-screen flex items-start justify-center py-10 px-4">
+    <div class="w-full max-w-4xl">
+
+      <!-- HERO -->
+      <header class="flex items-center gap-4 mb-8">
+        <img src="./Images/ChatGPT Image 25 de jul. de 2025, 12_09_49 (1).png" 
+             alt="PortuInglês" 
+             class="w-28 h-auto object-contain"/>
+
+        <div>
+          <h1 class="text-3xl font-extrabold leading-tight text-[var(--blue)]">Fale inglês com confiança e viva novas oportunidades</h1>
+          <p class="mt-2 text-sm text-gray-600 max-w-xl">
+            Método prático e moderno — conversação desde a primeira aula. Aula experimental <strong>gratuita</strong> com diagnóstico personalizado.
+          </p>
+        </div>
+      </header>
+
+      <!-- CARD principal -->
+      <section class="card p-6">
+        <div class="md:flex md:gap-6">
+          <div class="md:flex-1">
+            <h2 class="text-xl font-bold mb-2 text-[var(--red)]">Ganhe sua aula experimental + diagnóstico</h2>
+            <p class="text-sm text-gray-700 mb-4">
+              Descubra seu nível, receba um plano personalizado e experimente nosso método prático. Vagas limitadas.
+            </p>
+
+            <ul class="space-y-2 text-gray-800 mb-4">
+              <li>✅ Conversação real desde a primeira aula.</li>
+              <li>✅ Professores certificados e suporte contínuo.</li>
+              <li>✅ Plano prático focado no seu objetivo.</li>
+            </ul>
+
+            <div class="flex gap-3 items-center flex-wrap">
+              <button id="scrollToForm" class="btn-red font-semibold px-4 py-3 rounded-lg shadow">
+                💬 Agendar minha aula gratuita
+              </button>
+              <a href="#como-funciona" class="text-sm text-[var(--blue)] underline">Como funciona</a>
+            </div>
+
+            <div class="mt-4 text-sm text-gray-600">
+              <span class="font-semibold text-[var(--red)]">Vagas limitadas:</span> apenas <span class="font-bold">20 aulas grátis</span> esta semana.<br>
+              <span class="mt-1 block">Garantia PortuInglês: se você não sentir progresso nas primeiras aulas, cancelamos sem custo.</span>
+            </div>
+          </div>
+
+          <!-- FORM -->
+          <aside class="mt-6 md:mt-0 md:w-[360px]">
+            <div class="bg-[var(--light)] p-4 rounded-xl border border-gray-200 shadow-inner">
+              <h3 class="font-bold mb-3 text-[var(--red)]">Reserve sua aula gratuita</h3>
+              <form id="leadForm" class="space-y-3">
+                <div>
+                  <label class="text-xs text-gray-600">Nome completo</label>
+                  <input id="name" required type="text" class="mt-1 w-full border border-gray-300 rounded-md px-3 py-2" placeholder="Ex: Ana Silva">
+                </div>
+                <div>
+                  <label class="text-xs text-gray-600">Telefone (WhatsApp)</label>
+                  <input id="phone" required type="text" class="mt-1 w-full border border-gray-300 rounded-md px-3 py-2" placeholder="Ex: (xx) xxxxx-xxxx">
+                </div>
+                <div>
+                  <label class="text-xs text-gray-600">Seu objetivo principal</label>
+                  <select id="objective" required class="mt-1 w-full border border-gray-300 rounded-md px-3 py-2">
+                    <option value="">Selecione...</option>
+                    <option value="Viagem">Viagem</option>
+                    <option value="Trabalho / Carreira">Trabalho / Carreira</option>
+                    <option value="Intercâmbio / Estudos">Intercâmbio / Estudos</option>
+                    <option value="Desenvolvimento pessoal">Desenvolvimento pessoal</option>
+                    <option value="Outro">Outro</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="text-xs text-gray-600">Faixa etária</label>
+                  <div class="mt-1 flex gap-2">
+                    <button type="button" class="personaBtn flex-1 py-2 rounded-md border border-gray-300 text-sm" data-val="15 – 45">15 – 45</button>
+                    <button type="button" class="personaBtn flex-1 py-2 rounded-md border border-gray-300 text-sm" data-val="45 – 80+">45 – 80+</button>
+                  </div>
+                  <input id="persona" type="hidden" value="">
+                </div>
+                <div>
+                  <button type="submit" class="w-full py-3 rounded-lg font-semibold btn-red">💬 Enviar</button>
+                </div>
+                <p class="text-xs text-gray-500 mt-2">Ao enviar, você será direcionado ao WhatsApp da PortuInglês para confirmar o agendamento.</p>
+              </form>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- COMO FUNCIONA -->
+      <section id="como-funciona" class="mt-8 card p-6">
+        <h3 class="text-lg font-bold mb-3 text-[var(--red)]">Como funciona o método PortuInglês</h3>
+        <div class="grid md:grid-cols-4 gap-4 text-sm">
+          <div class="p-4 bg-[var(--light)] rounded-lg"><h4 class="font-semibold">1. Diagnóstico</h4><p class="mt-1 text-gray-700">Aula gratuita de diagnóstico: entendemos seu nível e objetivo.</p></div>
+          <div class="p-4 bg-[var(--light)] rounded-lg"><h4 class="font-semibold">2. Aulas personalizadas</h4><p class="mt-1 text-gray-700">Plano focado no seu objetivo (carreira, viagem, estudos).</p></div>
+          <div class="p-4 bg-[var(--light)] rounded-lg"><h4 class="font-semibold">3. Conversação real</h4><p class="mt-1 text-gray-700">Prática constante com professores experientes.</p></div>
+          <div class="p-4 bg-[var(--light)] rounded-lg"><h4 class="font-semibold">4. Resultados</h4><p class="mt-1 text-gray-700">Evolução visível em poucas semanas.</p></div>
+        </div>
+      </section>
+
+      <!-- OFERTA -->
+      <section class="mt-8 card p-6">
+        <h3 class="text-lg font-bold mb-3 text-[var(--red)]">Oferta especial</h3>
+        <p class="text-gray-700 mb-4">Aula experimental + diagnóstico - <strong>grátis</strong> se você reservar sua vaga esta semana.</p>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="p-4 bg-[var(--light)] rounded-lg">
+            <h4 class="font-semibold">Planos oferecidos:</h4>
+            <ul class="mt-2 text-sm space-y-1">
+              <li>✅ Aula individual 1 (R$150)</li>
+              <p>• 1 aula por semana - 40min</p>
+              <li>✅ Aula individual 2 (R$300)</li>
+              <p>• 2 aulas por semana - 40min</p>
+              <li>✅ Aula em grupo (R$100)</li>
+              <p>• 1 aula em grupo por semana - 40min</p>
+              <li>✅ Aula avulsa (R$40)</li>
+              <p>• 1 Aula de 40min</p>
+            </ul>
+          </div>
+          <div class="p-4 bg-[var(--light)] rounded-lg flex flex-col justify-between">
+            <div>
+              <h4 class="font-semibold">Total:</h4>
+              <p class="text-2xl font-bold mt-2 text-[var(--red)]">GRÁTIS</p>
+              <p class="text-sm text-gray-700 mt-1">Aula experimental + diagnóstico sem custo — apenas <strong>20 vagas</strong> esta semana.</p>
+            </div>
+            <div class="mt-4">
+              <button id="ctaBottom" class="w-full py-3 rounded-lg font-semibold btn-red">Quero minha aula gratuita</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="mt-8 text-center text-[var(--blue)]/80 text-sm">
+        <p>P.S.: Aprender inglês não precisa ser complicado. Comece com uma aula, sem compromisso.</p>
+        <div class="mt-3 flex justify-center items-center gap-2">
+          <p>Bold English School</p>
+          <a href="https://www.instagram.com/boldenglishschool" target="_blank" class="flex items-center gap-2 text-[var(--blue)]/80 hover:text-[var(--red)] transition">
+            <!-- Ícone do Instagram -->
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24"
+                 width="18"
+                 height="18"
+                 style="fill: currentColor; display: inline-block;">
+                 <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm4.25 4a5.25 5.25 0 1 1 0 10.5a5.25 5.25 0 0 1 0-10.5Zm0 1.5a3.75 3.75 0 1 0 0 7.5a3.75 3.75 0 0 0 0-7.5Zm5.75-.75a.75.75 0 1 1 0-1.5a.75.75 0 0 1 0 1.5Z"/>
+            </svg>
+          </a>
+       </div>
+      </footer>
+  </main>
+
+  <!-- Modal -->
+  <div id="overlay" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50">
+    <div class="bg-white p-6 rounded-lg border border-gray-200 text-center max-w-sm">
+      <h4 class="font-bold text-lg mb-2 text-[var(--red)]">Quase pronto!</h4>
+      <p class="text-gray-700 mb-4">Abrimos o WhatsApp para você confirmar sua aula. Cheque a conversa e aguarde nosso contato.</p>
+      <button id="closeOverlay" class="py-2 px-4 rounded-md bg-[var(--blue)] text-white font-semibold">Fechar</button>
+    </div>
+  </div>
+
+  <script>
+    const WA_NUMBER = '5511986202378';
+    const WA_BASE = `https://wa.me/${WA_NUMBER}?text=`;
+
+    function waMessage({ name, phone, objective, persona }) {
+      const msg = `Oi! Quero agendar minha aula gratuita com a PortuInglês.%0A%0A` +
+                  `👤 Nome: ${name}%0A📱 Telefone: ${phone}%0A🎯 Objetivo: ${objective}%0A👥 Faixa etária: ${persona}`;
+      return WA_BASE + encodeURIComponent(decodeURIComponent(msg));
+    }
+
+    const form = document.getElementById('leadForm');
+    const overlay = document.getElementById('overlay');
+    const personaButtons = document.querySelectorAll('.personaBtn');
+    const personaInput = document.getElementById('persona');
+
+    personaButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        personaButtons.forEach(b => b.classList.remove('bg-[var(--red)]','text-white'));
+        btn.classList.add('bg-[var(--red)]','text-white');
+        personaInput.value = btn.dataset.val;
+      });
+    });
+
+    document.getElementById('scrollToForm').addEventListener('click', () => {
+      document.getElementById('name').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      document.getElementById('name').focus();
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const objective = document.getElementById('objective').value;
+      const persona = personaInput.value || 'Não informado';
+
+      if (!name || !phone || !objective) {
+        alert('Por favor, preencha todos os campos.');
+        return;
+      }
+
+      const url = waMessage({ name, phone, objective, persona });
+      window.open(url, '_blank');
+      overlay.classList.remove('hidden');
+      overlay.classList.add('flex');
+    });
+
+    document.getElementById('closeOverlay').addEventListener('click', () => {
+      overlay.classList.add('hidden');
+      overlay.classList.remove('flex');
+    });
+
+    // BOTÃO DO FINAL DA PÁGINA (CTA)
+    document.getElementById('ctaBottom').addEventListener('click', () => {
+      document.getElementById('name').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      document.getElementById('name').focus();
+    });
+  </script>
+</body>
+</html>

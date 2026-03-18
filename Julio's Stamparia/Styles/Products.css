@@ -1,0 +1,223 @@
+/* ===== Reset básico ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== Cabeçalho ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.site-logo {
+  height: 60px;
+  cursor: pointer;
+}
+
+.header__navbar {
+  display: flex;
+  gap: 1rem;
+}
+
+.header__navbar a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #0077ff;
+  transition: color 0.3s;
+}
+
+.header__navbar a:hover {
+  color: #005fcc;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#carrinho-contador {
+  background: #0077ff;
+  color: white;
+  padding: 0.3rem 0.7rem;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* Botão de logout */
+.logout {
+  background: #ff4b4b;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.logout:hover {
+  background: #cc0000;
+}
+
+/* ===== Conteúdo principal ===== */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.produtos h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+/* ===== Lista de produtos ===== */
+#produto-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card do produto */
+.produto-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.produto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.produto-card img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.produto-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.produto-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* Botão Comprar */
+.comprar {
+  background: #0077ff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.comprar:hover:not(:disabled) {
+  background: #005fcc;
+  transform: scale(1.05);
+}
+
+.comprar:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .header__navbar {
+    flex-direction: column;
+  }
+
+  main {
+    margin: 1rem;
+  }
+
+  #produto-lista {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+/* Container da logo e personalizar */
+.logo-personalizar {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* espaço entre logo e Personalizar */
+}
+
+.personalizar-link {
+  text-decoration: none;
+  font-weight: 600;
+  color: #000000;
+  transition: color 0.3s;
+}
+
+.personalizar-link:hover {
+  color: #000000;
+}
+
+/* Ajuste da logo para ficar mais simétrica */
+.site-logo {
+  height: 60px;
+  display: block;
+  margin: 0;
+}
+
+/* Carrinho */
+.carrinho {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.carrinho-btn:hover {
+  background: #005fcc;
+}
+
+/* Header principal */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+}

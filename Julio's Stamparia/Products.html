@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produtos - Julio's Stamparia</title>
+  <link rel="stylesheet" href="./Styles/Products.css"/>
+</head>
+<body>
+  <!-- ===== Cabeçalho ===== -->
+  <header class="site-header">
+  <div class="logo-personalizar">
+    <a href="index.html">
+      <img src="./Images/Julio's Logo.png" alt="Logo da MalaClean" class="site-logo" />
+    </a>
+    <a href="Personalizar.html" class="personalizar-link">Personalizar</a>
+  </div>
+
+  <div class="header-actions">
+    <div class="carrinho">
+      <span id="carrinho-contador">0</span>
+      <button class="carrinho-btn"></button>
+    </div>
+    <button class="logout" onclick="logout()">Sair</button>
+  </div>
+</header>
+
+
+  <!-- ===== Conteúdo principal ===== -->
+  <main>
+    <section class="produtos">
+      <h2>Produtos Disponíveis</h2>
+
+      <div id="produto-lista">
+        <article class="produto-card">
+          <img src="./Images/tshirt.png" alt="T-shirt básica branca estampada" />
+          <h3>T-shirt básica</h3>
+          <p>R$ 59,90</p>
+          <button class="comprar" aria-label="Comprar T-shirt básica">Comprar</button>
+        </article>
+
+        <article class="produto-card">
+          <img src="./Images/caneca.png" alt="Caneca personalizada branca com estampa colorida" />
+          <h3>Caneca personalizada</h3>
+          <p>R$ 29,90</p>
+          <button class="comprar" aria-label="Comprar caneca personalizada">Comprar</button>
+        </article>
+
+        <article class="produto-card">
+          <img src="./Images/moletom.png" alt="Moletom preto estampado" />
+          <h3>Moletom estampado</h3>
+          <p>R$ 119,90</p>
+          <button class="comprar" aria-label="Comprar moletom estampado">Comprar</button>
+        </article>
+
+        <article class="produto-card">
+          <img src="./Images/boné.png" alt="Boné personalizado azul" />
+          <h3>Boné personalizado</h3>
+          <p>R$ 39,90</p>
+          <button class="comprar" aria-label="Comprar boné personalizado">Comprar</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Scripts ===== -->
+  <script>
+    // Impede acesso sem login
+    //if (sessionStorage.getItem('loggedIn') !== 'true') {
+    //  alert('Faça login para acessar os produtos.');
+    //  window.location.href = 'login.html';
+    //}
+
+    // Função de logout
+    function logout() {
+      sessionStorage.removeItem('loggedIn');
+      window.location.href = 'login.html';
+    }
+
+    // Feedback nos botões de compra com contador
+    let contador = 0;
+    document.querySelectorAll(".comprar").forEach(botao => {
+      botao.addEventListener("click", () => {
+        contador++;
+        document.getElementById("carrinho-contador").textContent = contador;
+        botao.textContent = "Adicionado!";
+        botao.disabled = true;
+        setTimeout(() => {
+          botao.textContent = "Comprar";
+          botao.disabled = false;
+        }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>
