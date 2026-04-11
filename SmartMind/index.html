@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartMind - Intelligent Solutions</title>
+    <meta name="description" content="Explore AI tools and intelligent solutions with SmartMind. Discover the best artificial intelligence platforms.">
+    <meta name="author" content="Matheus O. Malaquias">
+    <meta property="og:title" content="SmartMind - Intelligent Solutions">
+    <meta property="og:description" content="Discover powerful AI tools and intelligent solutions for productivity, creativity, and automation.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://matheusmalaquias.github.io/wdd231/smartmind/images/smartmindlogo.webp">
+    <meta property="og:url" content="https://matheusmalaquias.github.io/wdd231/smartmind/index.html">
+    <link rel="icon" href="images/smartmindlogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    <script src="scripts/main.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="./images/smartmindsquare.png" alt="SmartMind Logo" width="80" height="80">
+            <h1>SmartMind - Intelligent Solutions</h1>
+        </a>
+        <button id="menu-button" class="hamburger" aria-label="Open navigation menu"></button>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+             <picture>
+                <img src="./images/logo.png" alt="SmartMind Logo" loading="lazy" width="400" height="250">
+            </picture>
+            <div class="hero-text">
+                <h2>Unlock the Power of Artificial Intelligence</h2>
+                <p>Explore cutting-edge AI tools transforming the future.</p>
+                <a href="tools.html" class="cta-button">Explore Our Tools</a>
+            </div>
+        </section>
+
+        <section class="about">
+            <h2>About SmartMind</h2>
+            <p>Whether you're a student, developer, or entrepreneur, SmartMind connects you with the most powerful AI platforms available today. From text generation to automation and data analysis, we bring intelligent solutions closer to you.</p>
+        </section>
+
+        <section class="featured-tools">
+            <h2>Featured AI Tools</h2>
+            <div class="modalities-grid">
+                <div class="modality-card">
+                    <img src="./images/chatgpt.png" alt="ChatGPT AI interface" loading="lazy" width="300" height="200">
+                    <h3>ChatGPT</h3>
+                    <p>An advanced AI chatbot that helps with writing, coding, learning, and problem-solving through natural conversations.</p>
+                </div>
+
+                <div class="modality-card">
+                    <img src="./images/n8n.png" alt="n8n automation tool" loading="lazy" width="300" height="200">
+                    <h3>n8n</h3>
+                    <p>An automation platform that connects apps and services, allowing you to create powerful workflows without heavy coding.</p>
+                </div>
+                
+                <div class="modality-card">
+                    <img src="./images/gemini.png" alt="Google Gemini AI" loading="lazy" width="300" height="200">
+                    <h3>Gemini</h3>
+                    <p>A powerful AI developed by Google that assists with research, content creation, and intelligent search capabilities.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="current-year"></span> SmartMind - Intelligent Solutions | Matheus O. Malaquias</p>
+        <p class="last-modified">Last Modification: <span id="last-modified"></span></p>
+        <div class="footer-links">
+             <a href="attributions.html">Attributions</a>
+            <a href="https://www.loom.com/share/cc7402f4d7624e83b8a1ef886e3aa0a5" target="_blank">Project Video</a>
+        </div>
+        <p id="visit-counter">Page visits: <span id="visits"></span></p>
+    </footer>
+
+</body>
+
+</html>

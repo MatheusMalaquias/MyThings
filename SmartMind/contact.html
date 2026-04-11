@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SmartMind</title>
+    <meta name="description" content="Explore AI tools and intelligent solutions with SmartMind. Discover the best artificial intelligence platforms.">
+    <meta name="author" content="Matheus O. Malaquias">
+    <meta property="og:title" content="Contact SmartMind">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://matheusmalaquias.github.io/wdd231/smartmind/images/smartmindlogo.webp">
+    <meta property="og:url" content="https://matheusmalaquias.github.io/wdd231/smartmind/index.html">
+    <meta property="og:description" content="Have questions? Reach out to our team for information on classes, schedules, and memberships.">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    <script src="scripts/main.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="./images/smartmindsquare.png" alt="SmartMind Logo" width="80" height="80">
+            <h1>SmartMind - Intelligent Solutions</h1>
+        </a>
+        <button id="menu-button" class="hamburger" aria-label="Open navigation menu"></button>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-title">
+            <h2>Contact Us</h2>
+            <p>We would love to hear from you. Fill out the form below to get started.</p>
+        </section>
+
+        <section class="contact-form-section">
+            <form action="thank-you.html" method="get">
+                <fieldset>
+                    <legend>Your Information</legend>
+                    <label for="fullName">Full Name*</label>
+                    <input type="text" id="fullName" name="fullName" required>
+
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required placeholder="example@email.com">
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Your Message</legend>
+                    <label for="interest">I'm interested in...</label>
+                    <select id="interest" name="interest">
+                        <option value="" disabled selected>Select a Modality</option>
+                        <option value="bjj">ChatGPT</option>
+                        <option value="boxing">n8n</option>
+                        <option value="muaythai">Gemini</option>
+                        <option value="mma">Claude</option>
+                        <option value="mmafit">Copilot</option>
+                        <option value="general">General Inquiry</option>
+                    </select>
+
+                    <label for="message">Message*</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </fieldset>
+
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+    <footer>
+        <p>&copy;<span id="current-year"></span> SmartMind - Intelligent Solutions | Matheus O. Malaquias</p>
+        <p class="last-modified">Last Modification: <span id="last-modified"></span></p>
+        <div class="footer-links">
+             <a href="attributions.html">Attributions</a>
+            <a href="https://www.loom.com/share/cc7402f4d7624e83b8a1ef886e3aa0a5" target="_blank">Project Video</a>
+        </div>
+        <p id="visit-counter">Page visits: <span id="visits"></span></p>
+    </footer>
+
+</body>
+
+</html>

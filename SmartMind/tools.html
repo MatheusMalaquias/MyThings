@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools - SmartMind - Intelligent Solutions</title>
+    <meta name="description" content="Explore our AI tools and intelligent solutions at SmartMind. Discover the best artificial intelligence platforms.">
+    <meta name="author" content="Matheus O. Malaquias">
+    <meta property="og:title" content="Our Tools - SmartMind">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://matheusmalaquias.github.io/wdd231/smartmind/images/smartmindlogo.webp">
+    <meta property="og:url" content="https://matheusmalaquias.github.io/wdd231/smartmind/index.html">
+    <meta property="og:description" content="Find the perfect AI tool for you. Explore our complete directory and learn more about each platform we offer.">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    <script src="scripts/main.js" type="module"></script>
+</head>
+
+<body id="modalities-page">
+    <header>
+        <a href="index.html" class="logo">
+            <img src="./images/smartmindsquare.png" alt="SmartMind Logo" width="80" height="80">
+            <h1>SmartMind - Intelligent Solutions</h1>
+        </a>
+        <button id="menu-button" class="hamburger" aria-label="Open navigation menu"></button>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-title">
+            <h2 class="tech-text-glow">AI Tools Directory</h2>
+            <p>Click on any tool to see more details.</p>
+        </section>
+        
+        <div id="class-schedule-container" class="schedule-grid">
+            <!-- Class cards will be dynamically inserted here by JavaScript -->
+        </div>
+    </main>
+
+    <dialog id="class-details-modal">
+        <div class="modal-content">
+            <button id="modal-close-button">&times;</button>
+            <img id="modal-img" src="images/placeholder.png" alt="AI Tool Image">
+            <h3 id="modal-title">Select a tool</h3>
+            <p><strong>Category:</strong> <span id="modal-instructor"></span></p>
+            <p><strong>Rating:</strong> <span id="modal-schedule"></span></p>
+            <p id="modal-description">Click on a tool to see details.</p>
+        </div>
+    </dialog>
+
+    <footer>
+        <p>&copy;<span id="current-year"></span> SmartMind - Intelligent Solutions | Matheus O. Malaquias</p>
+        <p class="last-modified">Last Modification: <span id="last-modified"></span></p>
+        <div class="footer-links">
+             <a href="attributions.html">Attributions</a>
+            <a href="https://www.loom.com/share/cc7402f4d7624e83b8a1ef886e3aa0a5" target="_blank">Project Video</a>
+        </div>
+        <p id="visit-counter">Page visits: <span id="visits"></span></p>
+    </footer>
+
+</body>
+
+</html>

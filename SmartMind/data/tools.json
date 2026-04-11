@@ -1,0 +1,107 @@
+[
+  {
+    "name": "ChatGPT",
+    "category": "Text AI",
+    "rating": 9.5,
+    "description": "Advanced AI chatbot for writing, coding, and problem-solving.",
+    "image": "images/chatgpt.png"
+  },
+  {
+    "name": "Gemini",
+    "category": "Text AI",
+    "rating": 9.0,
+    "description": "Google AI assistant for research, writing, and productivity.",
+    "image": "images/gemini.png"
+  },
+  {
+    "name": "Claude",
+    "category": "Text AI",
+    "rating": 9.4,
+    "description": "AI assistant focused on safe and helpful conversations.",
+    "image": "images/claude.png"
+  },
+  {
+    "name": "Copilot",
+    "category": "Code AI",
+    "rating": 9.3,
+    "description": "AI coding assistant that helps developers write code faster.",
+    "image": "images/copilot.png"
+  },
+  {
+    "name": "Midjourney",
+    "category": "Image AI",
+    "rating": 9.2,
+    "description": "Generates high-quality images from text prompts.",
+    "image": "images/midjourney.png"
+  },
+  {
+    "name": "DALL-E",
+    "category": "Image AI",
+    "rating": 9.1,
+    "description": "Creates images and artwork using AI prompts.",
+    "image": "images/dalle.png"
+  },
+  {
+    "name": "Leonardo AI",
+    "category": "Image AI",
+    "rating": 9.0,
+    "description": "AI tool for creating game assets and digital art.",
+    "image": "images/leonardo.png"
+  },
+  {
+    "name": "Runway",
+    "category": "Video AI",
+    "rating": 8.9,
+    "description": "AI-powered video editing and generation platform.",
+    "image": "images/runway.png"
+  },
+  {
+    "name": "Pictory",
+    "category": "Video AI",
+    "rating": 8.7,
+    "description": "Transforms text content into engaging videos.",
+    "image": "images/pictory.png"
+  },
+  {
+    "name": "Synthesia",
+    "category": "Video AI",
+    "rating": 8.8,
+    "description": "Creates AI-generated videos with virtual presenters.",
+    "image": "images/synthesia.png"
+  },
+  {
+    "name": "n8n",
+    "category": "Automation",
+    "rating": 9.1,
+    "description": "Workflow automation tool for connecting apps and services.",
+    "image": "images/n8n.png"
+  },
+  {
+    "name": "Zapier",
+    "category": "Automation",
+    "rating": 9.0,
+    "description": "Automates workflows between different web applications.",
+    "image": "images/zapier.png"
+  },
+  {
+    "name": "Notion AI",
+    "category": "Productivity",
+    "rating": 8.9,
+    "description": "Enhances note-taking and productivity with AI features.",
+    "image": "images/notion.png"
+  },
+  {
+    "name": "Grammarly",
+    "category": "Writing AI",
+    "rating": 8.8,
+    "description": "Improves writing with grammar and style suggestions.",
+    "image": "images/grammarly.png"
+  },
+  {
+    "name": "Perplexity",
+    "category": "Search AI",
+    "rating": 9.2,
+    "description": "AI-powered search engine with real-time answers.",
+    "image": "images/perplexity.png"
+  }
+]
