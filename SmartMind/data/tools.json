@@ -1,107 +1,68 @@
 [
   {
-    "name": "ChatGPT",
-    "category": "Text AI",
-    "rating": 9.5,
-    "description": "Advanced AI chatbot for writing, coding, and problem-solving.",
-    "image": "images/chatgpt.png"
+    "id": 1,
+    "name": "AI Agents",
+    "category": "Artificial Intelligence",
+    "impact": "High Impact",
+    "industry": "Customer Service",
+    "description": "Custom AI assistants that automate customer interactions, qualify leads, answer frequently asked questions, and support internal operations.",
+    "benefit": "Reduce response times and increase operational efficiency.",
+    "technology": "OpenAI, Claude, Gemini",
+    "image": "images/ai-agent.jpg"
   },
   {
-    "name": "Gemini",
-    "category": "Text AI",
-    "rating": 9.0,
-    "description": "Google AI assistant for research, writing, and productivity.",
-    "image": "images/gemini.png"
+    "id": 2,
+    "name": "Workflow Automation",
+    "category": "Business Automation",
+    "impact": "High Impact",
+    "industry": "Operations",
+    "description": "Automate repetitive tasks and connect processes across teams, departments, and software platforms.",
+    "benefit": "Reduce manual work and improve productivity.",
+    "technology": "n8n, Make, Zapier",
+    "image": "images/automation.jpg"
   },
   {
-    "name": "Claude",
-    "category": "Text AI",
-    "rating": 9.4,
-    "description": "AI assistant focused on safe and helpful conversations.",
-    "image": "images/claude.png"
+    "id": 3,
+    "name": "System Integrations",
+    "category": "Technology Solutions",
+    "impact": "High Impact",
+    "industry": "Information Technology",
+    "description": "Connect CRMs, databases, spreadsheets, communication platforms, and business applications into a unified ecosystem.",
+    "benefit": "Eliminate data silos and improve information flow.",
+    "technology": "APIs, Webhooks, ERP Systems",
+    "image": "images/integration.jpg"
   },
   {
-    "name": "Copilot",
-    "category": "Code AI",
-    "rating": 9.3,
-    "description": "AI coding assistant that helps developers write code faster.",
-    "image": "images/copilot.png"
+    "id": 4,
+    "name": "Data Intelligence",
+    "category": "Business Analytics",
+    "impact": "Strategic",
+    "industry": "Business Intelligence",
+    "description": "Transform raw business data into actionable insights through dashboards, reporting, and AI-powered analytics.",
+    "benefit": "Support faster and more accurate decision-making.",
+    "technology": "Power BI, Looker Studio, SQL",
+    "image": "images/data.jpg"
   },
   {
-    "name": "Midjourney",
-    "category": "Image AI",
-    "rating": 9.2,
-    "description": "Generates high-quality images from text prompts.",
-    "image": "images/midjourney.png"
+    "id": 5,
+    "name": "Customer Support Automation",
+    "category": "Customer Experience",
+    "impact": "High Impact",
+    "industry": "Support Operations",
+    "description": "Automate ticket handling, customer communication, and support workflows using AI-powered systems.",
+    "benefit": "Improve customer satisfaction while reducing support costs.",
+    "technology": "AI Chatbots, CRM Integration",
+    "image": "images/support.jpg"
   },
   {
-    "name": "DALL-E",
-    "category": "Image AI",
-    "rating": 9.1,
-    "description": "Creates images and artwork using AI prompts.",
-    "image": "images/dalle.png"
-  },
-  {
-    "name": "Leonardo AI",
-    "category": "Image AI",
-    "rating": 9.0,
-    "description": "AI tool for creating game assets and digital art.",
-    "image": "images/leonardo.png"
-  },
-  {
-    "name": "Runway",
-    "category": "Video AI",
-    "rating": 8.9,
-    "description": "AI-powered video editing and generation platform.",
-    "image": "images/runway.png"
-  },
-  {
-    "name": "Pictory",
-    "category": "Video AI",
-    "rating": 8.7,
-    "description": "Transforms text content into engaging videos.",
-    "image": "images/pictory.png"
-  },
-  {
-    "name": "Synthesia",
-    "category": "Video AI",
-    "rating": 8.8,
-    "description": "Creates AI-generated videos with virtual presenters.",
-    "image": "images/synthesia.png"
-  },
-  {
-    "name": "n8n",
-    "category": "Automation",
-    "rating": 9.1,
-    "description": "Workflow automation tool for connecting apps and services.",
-    "image": "images/n8n.png"
-  },
-  {
-    "name": "Zapier",
-    "category": "Automation",
-    "rating": 9.0,
-    "description": "Automates workflows between different web applications.",
-    "image": "images/zapier.png"
-  },
-  {
-    "name": "Notion AI",
-    "category": "Productivity",
-    "rating": 8.9,
-    "description": "Enhances note-taking and productivity with AI features.",
-    "image": "images/notion.png"
-  },
-  {
-    "name": "Grammarly",
-    "category": "Writing AI",
-    "rating": 8.8,
-    "description": "Improves writing with grammar and style suggestions.",
-    "image": "images/grammarly.png"
-  },
-  {
-    "name": "Perplexity",
-    "category": "Search AI",
-    "rating": 9.2,
-    "description": "AI-powered search engine with real-time answers.",
-    "image": "images/perplexity.png"
+    "id": 6,
+    "name": "Sales Process Optimization",
+    "category": "Sales Automation",
+    "impact": "Revenue Growth",
+    "industry": "Sales",
+    "description": "Automate lead qualification, follow-up sequences, pipeline management, and sales reporting.",
+    "benefit": "Increase conversion rates and reduce administrative work.",
+    "technology": "CRM, AI Agents, Automation Platforms",
+    "image": "images/sales.jpg"
   }
 ]

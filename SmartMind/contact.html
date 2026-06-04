@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - SmartMind</title>
-    <meta name="description" content="Explore AI tools and intelligent solutions with SmartMind. Discover the best artificial intelligence platforms.">
+    <title>Contact SmartMind | AI Automation & Business Intelligence</title>
+    <meta name="description" content="Contact SmartMind to discuss AI automation, system integrations, business intelligence, and operational solutions for your company.">
     <meta name="author" content="Matheus O. Malaquias">
     <meta property="og:title" content="Contact SmartMind">
     <meta property="og:type" content="website">
@@ -31,7 +31,7 @@
         <nav>
             <ul id="nav-menu">
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="tools.html">Tools</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -39,14 +39,21 @@
 
     <main>
         <section class="page-title">
-            <h2>Contact Us</h2>
-            <p>We would love to hear from you. Fill out the form below to get started.</p>
+            <h2>Let's Discuss Your Business Goals</h2>
+            <p>Whether you're looking to automate workflows, improve customer support,
+                integrate business systems, or gain better insights from your data,
+                SmartMind can help.
+            </p>
         </section>
 
         <section class="contact-form-section">
             <form action="thank-you.html" method="get">
                 <fieldset>
                     <legend>Your Information</legend>
+
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company">
+
                     <label for="fullName">Full Name*</label>
                     <input type="text" id="fullName" name="fullName" required>
 
@@ -61,29 +68,33 @@
                     <legend>Your Message</legend>
                     <label for="interest">I'm interested in...</label>
                     <select id="interest" name="interest">
-                        <option value="" disabled selected>Select a Modality</option>
-                        <option value="bjj">ChatGPT</option>
-                        <option value="boxing">n8n</option>
-                        <option value="muaythai">Gemini</option>
-                        <option value="mma">Claude</option>
-                        <option value="mmafit">Copilot</option>
-                        <option value="general">General Inquiry</option>
+                        <option value="" disabled selected>Select a Service</option>
+                        <option value="ai-agents">AI Agents</option>
+                        <option value="workflow-automation">Workflow Automation</option>
+                        <option value="system-integrations">System Integrations</option>
+                        <option value="data-intelligence">Data Intelligence</option>
+                        <option value="customer-support">Customer Support Automation</option>
+                        <option value="sales-optimization">Sales Process Optimization</option>
+                        <option value="consultation">General Consultation</option>
                     </select>
 
-                    <label for="message">Message*</label>
-                    <textarea id="message" name="message" rows="6" required></textarea>
+                    <label for="message">Tell us about your business needs</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        required
+                        placeholder="Describe your current challenges, goals, or processes you would like to automate.">
+                    </textarea>
                 </fieldset>
 
-                <button type="submit" class="cta-button">Send Message</button>
+                <button type="submit" class="cta-button">Request Consultation</button>
             </form>
         </section>
     </main>
 
     <footer>
-    <footer>
-        <p>&copy;<span id="current-year"></span> SmartMind - Intelligent Solutions | Matheus O. Malaquias</p>
-        <p class="last-modified">Last Modification: <span id="last-modified"></span></p>
-        <p id="visit-counter">Page visits: <span id="visits"></span></p>
+        <p>&copy; <span id="current-year"></span>SmartMind | AI Automation & Business Intelligence | Matheus O. Malaquias</p>
     </footer>
 
 </body>
