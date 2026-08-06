@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Processos · Portal Jurídico</title>
+  <link rel="stylesheet" href="./Styles/style.css" />
+</head>
+<body>
+
+  <div class="app-shell">
+
+    <aside class="app-sidebar">
+      <div class="app-sidebar-brand">
+        <div class="seal">§</div>
+        <span>Portal Jurídico</span>
+      </div>
+
+      <nav class="app-nav">
+        <a href="dashboard.html" class="active">
+          <span class="app-nav-icon"></span> Processos
+        </a>
+        <a href="clientes.html">
+          <span class="app-nav-icon"></span> Clientes
+        </a>
+        <a href="prazos.html">
+          <span class="app-nav-icon"></span> Prazos
+        </a>
+        <a href="alertas.html">
+          <span class="app-nav-icon"></span> Alertas
+        </a>
+        <a href="usuarios.html" id="nav-usuarios" hidden>
+          <span class="app-nav-icon"></span> Usuários
+        </a>
+      </nav>
+
+      <div class="app-sidebar-foot">
+        <span class="app-user" id="app-user-email">—</span>
+        <button class="app-logout" id="logout-btn">Sair</button>
+      </div>
+    </aside>
+
+    <main class="app-main">
+      <div class="app-main-head">
+        <div>
+          <h1>Processos</h1>
+          <p>Painel geral dos processos monitorados pelo escritório.</p>
+        </div>
+      </div>
+
+      <div class="empty-state">
+        <div class="seal">§</div>
+        <h3>Nenhum processo cadastrado ainda</h3>
+        <p>Cadastre o primeiro processo ou cliente para começar a receber atualizações automáticas dos tribunais.</p>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script type="module" src="./Scripts/auth.js"></script>
+  <script type="module" src="./Scripts/dashboard.js"></script>
+</body>
+</html>

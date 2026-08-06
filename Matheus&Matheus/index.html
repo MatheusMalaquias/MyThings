@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrar · Portal Jurídico</title>
+  <link rel="stylesheet" href="./Styles/style.css"/>
+</head>
+<body>
+
+  <div class="auth-shell">
+
+    <!-- Painel de marca -->
+    <aside class="auth-brand">
+      <div class="auth-brand-top">
+        <div class="seal">§</div>
+        <span class="auth-brand-name">Portal Jurídico</span>
+      </div>
+
+      <div class="auth-brand-main">
+        <h1>Seus processos, monitorados todos os dias.</h1>
+        <p>Acompanhe andamentos, prazos e clientes do escritório em um único lugar, atualizado automaticamente a partir dos tribunais.</p>
+      </div>
+
+      <div class="auth-brand-foot">
+        <span class="dot"></span>
+        Integração JUDIT ativa
+      </div>
+    </aside>
+
+    <!-- Painel de formulário -->
+    <main class="auth-form-side">
+      <div class="auth-card">
+        <h2>Entrar</h2>
+        <p class="auth-sub">Acesso restrito aos usuários do escritório.</p>
+
+        <p class="auth-error" id="auth-error" hidden></p>
+
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+          </div>
+
+          <div class="field">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" autocomplete="current-password" required />
+          </div>
+
+          <div class="field-row-between">
+            <span></span>
+            <a href="#">Esqueci minha senha</a>
+          </div>
+
+          <button type="submit" class="btn-primary" id="submit-btn">Entrar</button>
+        </form>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script type="module" src="./Scripts/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clientes · Portal Jurídico</title>
+  <link rel="stylesheet" href="./Styles/style.css"/>
+</head>
+<body>
+
+  <div class="app-shell">
+
+    <aside class="app-sidebar">
+      <div class="app-sidebar-brand">
+        <div class="seal">§</div>
+        <span>Portal Jurídico</span>
+      </div>
+
+      <nav class="app-nav">
+        <a href="dashboard.html">
+          <span class="app-nav-icon"></span> Processos
+        </a>
+        <a href="clientes.html" class="active">
+          <span class="app-nav-icon"></span> Clientes
+        </a>
+        <a href="prazos.html">
+          <span class="app-nav-icon"></span> Prazos
+        </a>
+        <a href="alertas.html">
+          <span class="app-nav-icon"></span> Alertas
+        </a>
+        <a href="usuarios.html" id="nav-usuarios" hidden>
+          <span class="app-nav-icon"></span> Usuários
+        </a>
+      </nav>
+
+      <div class="app-sidebar-foot">
+        <span class="app-user" id="app-user-email">—</span>
+        <button class="app-logout" id="logout-btn">Sair</button>
+      </div>
+    </aside>
+
+    <main class="app-main">
+      <div class="app-main-head">
+        <div>
+          <h1>Clientes</h1>
+          <p>Pessoas físicas e jurídicas atendidas pelo escritório.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Todos os clientes</h2>
+        <p class="panel-sub">Cadastrados no escritório.</p>
+        <table class="table" id="tabela-clientes">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Tipo</th>
+              <th>CPF/CNPJ</th>
+              <th>Contato</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-clientes-corpo">
+            <tr><td colspan="4">Carregando...</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h2>Adicionar cliente</h2>
+        <p class="form-feedback" id="form-feedback" hidden></p>
+
+        <form id="form-novo-cliente">
+          <div class="form-grid">
+            <div class="field">
+              <label for="novo-tipo">Tipo</label>
+              <select id="novo-tipo">
+                <option value="PF">Pessoa física</option>
+                <option value="PJ">Pessoa jurídica</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="novo-nome">Nome</label>
+              <input type="text" id="novo-nome" required />
+            </div>
+            <div class="field">
+              <label for="novo-doc">CPF/CNPJ</label>
+              <input type="text" id="novo-doc" required />
+            </div>
+            <div class="field">
+              <label for="novo-contato">Contato</label>
+              <input type="text" id="novo-contato" placeholder="telefone ou e-mail" />
+            </div>
+          </div>
+          <button type="submit" class="btn-primary" id="novo-cliente-btn" style="margin-top: 14px; max-width: 200px;">
+            Adicionar
+          </button>
+        </form>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script type="module" src="./Scripts/auth.js"></script>
+  <script type="module" src="./Scripts/dashboard.js"></script>
+  <script type="module" src="./Scripts/clientes.js"></script>
+</body>
+</html>

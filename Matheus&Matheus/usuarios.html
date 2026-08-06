@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usuários · Portal Jurídico</title>
+  <link rel="stylesheet" href="./Styles/style.css" />
+</head>
+<body>
+
+  <div class="app-shell">
+
+    <aside class="app-sidebar">
+      <div class="app-sidebar-brand">
+        <div class="seal">§</div>
+        <span>Portal Jurídico</span>
+      </div>
+
+      <nav class="app-nav">
+        <a href="dashboard.html">
+          <span class="app-nav-icon"></span> Processos
+        </a>
+        <a href="clientes.html">
+          <span class="app-nav-icon"></span> Clientes
+        </a>
+        <a href="prazos.html">
+          <span class="app-nav-icon"></span> Prazos
+        </a>
+        <a href="alertas.html">
+          <span class="app-nav-icon"></span> Alertas
+        </a>
+        <a href="usuarios.html" class="active" id="nav-usuarios">
+          <span class="app-nav-icon"></span> Usuários
+        </a>
+      </nav>
+
+      <div class="app-sidebar-foot">
+        <span class="app-user" id="app-user-email">—</span>
+        <button class="app-logout" id="logout-btn">Sair</button>
+      </div>
+    </aside>
+
+    <main class="app-main">
+      <div class="app-main-head">
+        <div>
+          <h1>Usuários</h1>
+          <p>Contas com acesso ao escritório. Só administradores criam novas contas.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Equipe</h2>
+        <p class="panel-sub">Todos os usuários vinculados ao seu escritório.</p>
+        <table class="table" id="tabela-usuarios">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>E-mail</th>
+              <th>Papel</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-usuarios-corpo">
+            <tr><td colspan="3">Carregando...</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h2>Adicionar usuário</h2>
+        <p class="panel-sub">A pessoa recebe um e-mail de convite pra criar a própria senha.</p>
+
+        <p class="form-feedback" id="form-feedback" hidden></p>
+
+        <form id="form-novo-usuario">
+          <div class="form-grid">
+            <div class="field">
+              <label for="novo-nome">Nome</label>
+              <input type="text" id="novo-nome" required />
+            </div>
+            <div class="field">
+              <label for="novo-email">E-mail</label>
+              <input type="email" id="novo-email" required />
+            </div>
+            <div class="field">
+              <label for="novo-role">Papel</label>
+              <select id="novo-role">
+                <option value="advogado">Advogado</option>
+                <option value="admin">Administrador</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary" id="novo-usuario-btn">Convidar</button>
+          </div>
+        </form>
+
+        <p class="form-note">
+          O convite é enviado por um workflow no n8n, que usa a chave administrativa
+          do Supabase do lado do servidor — ela nunca fica exposta aqui no navegador.
+        </p>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script type="module" src="./Scripts/auth.js"></script>
+  <script type="module" src="./Scripts/usuarios.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prazos · Portal Jurídico</title>
+  <link rel="stylesheet" href="./Styles/style.css" />
+</head>
+<body>
+
+  <div class="app-shell">
+
+    <aside class="app-sidebar">
+      <div class="app-sidebar-brand">
+        <div class="seal">§</div>
+        <span>Portal Jurídico</span>
+      </div>
+
+      <nav class="app-nav">
+        <a href="dashboard.html">
+          <span class="app-nav-icon"></span> Processos
+        </a>
+        <a href="clientes.html">
+          <span class="app-nav-icon"></span> Clientes
+        </a>
+        <a href="prazos.html" class="active">
+          <span class="app-nav-icon"></span> Prazos
+        </a>
+        <a href="alertas.html">
+          <span class="app-nav-icon"></span> Alertas
+        </a>
+        <a href="usuarios.html" id="nav-usuarios" hidden>
+          <span class="app-nav-icon"></span> Usuários
+        </a>
+      </nav>
+
+      <div class="app-sidebar-foot">
+        <span class="app-user" id="app-user-email">—</span>
+        <button class="app-logout" id="logout-btn">Sair</button>
+      </div>
+    </aside>
+
+    <main class="app-main">
+      <div class="app-main-head">
+        <div>
+          <h1>Prazos</h1>
+          <p>Compromissos e prazos do escritório, vinculados ou não a um processo.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Próximos prazos</h2>
+        <p class="panel-sub">Ordenados por data, os mais próximos primeiro.</p>
+        <table class="table" id="tabela-prazos">
+          <thead>
+            <tr>
+              <th>Descrição</th>
+              <th>Data limite</th>
+              <th>Processo</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tabela-prazos-corpo">
+            <tr><td colspan="5">Carregando...</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h2>Adicionar prazo</h2>
+        <p class="panel-sub">O vínculo com um processo é opcional — pode ser adicionado depois.</p>
+        <p class="form-feedback" id="form-feedback" hidden></p>
+
+        <form id="form-novo-prazo">
+          <div class="form-grid">
+            <div class="field">
+              <label for="novo-descricao">Descrição</label>
+              <input type="text" id="novo-descricao" placeholder="ex.: Apresentar contestação" required />
+            </div>
+            <div class="field">
+              <label for="novo-data">Data limite</label>
+              <input type="date" id="novo-data" required />
+            </div>
+            <div class="field">
+              <label for="novo-processo">Processo (opcional)</label>
+              <select id="novo-processo">
+                <option value="">— nenhum —</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary" id="novo-prazo-btn">Adicionar</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script type="module" src="./Scripts/auth.js"></script>
+  <script type="module" src="./Scripts/dashboard.js"></script>
+  <script type="module" src="./Scripts/prazos.js"></script>
+</body>
+</html>

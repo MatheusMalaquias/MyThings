@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alertas · Portal Jurídico</title>
+  <link rel="stylesheet" href="./Styles/style.css" />
+</head>
+<body>
+
+  <div class="app-shell">
+
+    <aside class="app-sidebar">
+      <div class="app-sidebar-brand">
+        <div class="seal">§</div>
+        <span>Portal Jurídico</span>
+      </div>
+
+      <nav class="app-nav">
+        <a href="dashboard.html">
+          <span class="app-nav-icon"></span> Processos
+        </a>
+        <a href="clientes.html">
+          <span class="app-nav-icon"></span> Clientes
+        </a>
+        <a href="prazos.html">
+          <span class="app-nav-icon"></span> Prazos
+        </a>
+        <a href="alertas.html" class="active">
+          <span class="app-nav-icon"></span> Alertas
+        </a>
+        <a href="usuarios.html" id="nav-usuarios" hidden>
+          <span class="app-nav-icon"></span> Usuários
+        </a>
+      </nav>
+
+      <div class="app-sidebar-foot">
+        <span class="app-user" id="app-user-email">—</span>
+        <button class="app-logout" id="logout-btn">Sair</button>
+      </div>
+    </aside>
+
+    <main class="app-main">
+      <div class="app-main-head">
+        <div>
+          <h1>Alertas</h1>
+          <p>Avisos gerados automaticamente a partir de movimentações e prazos.</p>
+        </div>
+      </div>
+
+      <div id="alertas-container">
+        <div class="empty-state">
+          <div class="seal">§</div>
+          <h3>Nenhum alerta ainda</h3>
+          <p>Assim que os processos estiverem sendo monitorados pela JUDIT, as movimentações novas aparecem aqui.</p>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script type="module" src="./Scripts/auth.js"></script>
+  <script type="module" src="./Scripts/dashboard.js"></script>
+  <script type="module" src="./Scripts/alertas.js"></script>
+</body>
+</html>
