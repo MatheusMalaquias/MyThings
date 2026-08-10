@@ -233,6 +233,7 @@
     <div class="pulse" id="statusPulse"></div>
     <div class="header-text">
       <h1>Suporte Inteligente</h1>
+      <p id="statusLabel">base consultada em tempo real</p>
     </div>
   </div>
 
@@ -268,6 +269,7 @@
 
   function addMessage(text, who) {
     clearHint();
+
     const row = document.createElement('div');
     row.className = 'row ' + who;
 
@@ -281,13 +283,16 @@
 
     row.appendChild(tag);
     row.appendChild(bubble);
+
     log.appendChild(row);
     log.scrollTop = log.scrollHeight;
+
     return bubble;
   }
 
   function addTyping() {
     clearHint();
+
     const row = document.createElement('div');
     row.className = 'row bot';
     row.id = 'typingRow';
@@ -298,63 +303,116 @@
 
     const bubble = document.createElement('div');
     bubble.className = 'bubble';
-    bubble.innerHTML = '<span class="typing"><span></span><span></span><span></span></span>';
+
+    bubble.innerHTML = `
+      <span class="typing">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    `;
 
     row.appendChild(tag);
     row.appendChild(bubble);
+
     log.appendChild(row);
     log.scrollTop = log.scrollHeight;
   }
 
   function removeTyping() {
     const row = document.getElementById('typingRow');
-    if (row) row.remove();
+
+    if (row) {
+      row.remove();
+    }
   }
 
   function setThinking(isThinking) {
-    pulse.classList.toggle('thinking', isThinking);
-    statusLabel.textContent = isThinking ? 'consultando a base...' : 'base consultada em tempo real';
+    if (pulse) {
+      pulse.classList.toggle('thinking', isThinking);
+    }
+
+    if (statusLabel) {
+      statusLabel.textContent = isThinking
+        ? 'consultando a base...'
+        : 'base consultada em tempo real';
+    }
   }
 
   async function sendQuestion() {
     const question = input.value.trim();
-    if (!question) return;
+
+    if (!question) {
+      return;
+    }
 
     addMessage(question, 'user');
+
     input.value = '';
     sendBtn.disabled = true;
+
     setThinking(true);
     addTyping();
 
     try {
+      console.log('Enviando pergunta para o n8n:', question);
+
       const response = await fetch(WEBHOOK_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ pergunta: question })
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          pergunta: question
+        })
       });
 
-      if (!response.ok) throw new Error('status ' + response.status);
+      console.log('Status do webhook:', response.status);
+
+      if (!response.ok) {
+        throw new Error('Webhook retornou status ' + response.status);
+      }
 
       const data = await response.json();
-      const resposta = data.resposta || data.answer || data.output || 'Não consegui obter uma resposta agora.';
+
+      console.log('Resposta recebida do n8n:', data);
+
+      const resposta =
+        data.resposta ||
+        data.answer ||
+        data.output ||
+        'Não consegui obter uma resposta agora.';
 
       removeTyping();
       addMessage(resposta, 'bot');
+
     } catch (err) {
-      removeTyping();
-      const bubble = addMessage('Não consegui falar com o suporte agora. Tenta de novo em instantes.', 'bot');
-      bubble.classList.add('error');
       console.error('Erro ao consultar o webhook:', err);
+
+      removeTyping();
+
+      const bubble = addMessage(
+        'Não consegui falar com o suporte agora. Tenta de novo em instantes.',
+        'bot'
+      );
+
+      bubble.classList.add('error');
+
     } finally {
       sendBtn.disabled = false;
+
       setThinking(false);
+
       input.focus();
     }
   }
 
   sendBtn.addEventListener('click', sendQuestion);
+
   input.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') sendQuestion();
+    if (e.key === 'Enter') {
+      sendQuestion();
+    }
   });
 </script>
 
