@@ -223,13 +223,21 @@ footer a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
   font-size: 14px;
+  width: 60px;
   transition: transform 0.2s ease-in-out; /* animação ao passar o mouse */
 }
 
-.tech-icons i {
+.tech-icons i,
+.tech-icons svg {
+  height: 40px;
+  width: 40px;
   font-size: 40px;
   margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Estilo do botão */

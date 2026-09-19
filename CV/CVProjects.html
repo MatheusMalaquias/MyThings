@@ -61,22 +61,113 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1 data-lang="pt">Transformando ideias em soluções digitais</h1>
-    <h1 data-lang="en" style="display:none;">Transforming ideas into digital solutions</h1>
+    <h1 data-lang="pt">Projetos que venho construindo</h1>
+    <h1 data-lang="en" style="display:none;">Projects I've been building</h1>
 
     <p data-lang="pt">
-      Sou desenvolvedor com foco em criar aplicações eficientes e bem estruturadas utilizando Python, C# e tecnologias web modernas.
+      Aqui estão alguns dos projetos que venho desenvolvendo até o momento — de agentes de IA e automações a aplicações web e projetos acadêmicos em HTML, CSS, Python e C#.
     </p>
     <p data-lang="en" style="display:none;">
-      I'm a developer focused on creating efficient, well-structured applications using Python, C#, and modern web technologies.
+      Here are some of the projects I've been working on so far — from AI agents and automations to web applications and academic projects in HTML, CSS, Python, and C#.
     </p>
   </section>
 
   <!-- Projetos -->
   <section id="projetos">
+    <p class="projects-intro" data-lang="pt">Clique em "Ver mais" em cada card para ler a descrição completa do projeto.</p>
+    <p class="projects-intro" data-lang="en" style="display:none;">Click "Show more" on each card to read the full project description.</p>
+
     <div class="projetos-grid">
 
-      <!-- Projeto 1 -->
+      <!-- Projeto 1 - Synaptech -->
+      <div class="card">
+        <div class="carousel">
+          <div class="slides">
+            <img src="./Images/Synaptech.png" alt="">
+            <img src="./Images/Image1.png" alt="">
+            <img src="./Images/Image2.png" alt="">
+            <img src="./Images/Image3.png" alt="">
+          </div>
+        </div>
+        <h3>Synaptech</h3>
+
+        <div class="card-desc-short">
+          <p data-lang="pt">Empresa de automação com IA que fundei, com produtos para clínicas, vendas e serviço em campo.</p>
+          <p data-lang="en" style="display:none;">AI automation company I founded, with products for clinics, sales, and field-service businesses.</p>
+        </div>
+        <div class="card-desc-full" style="display:none;">
+          <p data-lang="pt">Empresa de automação com IA que fundei. Site institucional com alternância PT/EN, landing page em scrollytelling com captura de leads via webhook, e três produtos comerciais — SalesSync, ClinicBot e FieldBot — para clínicas, vendas e serviço em campo.</p>
+          <p data-lang="en" style="display:none;">AI automation company I founded. Multi-page site with a PT/EN toggle, a scrollytelling landing page with webhook-based lead capture, and three commercial products — SalesSync, ClinicBot, and FieldBot — for clinics, sales, and field-service businesses.</p>
+        </div>
+
+        <button class="ver-mais" data-lang="pt" onclick="openModal(this)">Ver mais</button>
+        <button class="ver-mais" data-lang="en" style="display:none;" onclick="openModal(this)">Show more</button>
+
+        <div class="card-links">
+          <a href="mailto:mateusotavio614@gmail.com?subject=Synaptech" target="_blank" data-lang="pt">Ver Projeto</a>
+          <a href="mailto:mateusotavio614@gmail.com?subject=Synaptech" target="_blank" data-lang="en" style="display:none;">Ver Projeto</a>
+        </div>
+      </div>
+
+      <!-- Projeto 2 - Agente Malaquias / Start Odonto -->
+      <div class="card">
+        <div class="card-visual-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.477 2 2 6.145 2 11.25C2 13.79 3.13 16.09 4.99 17.74C4.87 19.02 4.42 20.19 3.71 21.15C3.55 21.37 3.64 21.68 3.9 21.76C5.68 22.28 7.58 21.87 9.02 20.79C9.98 21.07 11 21.25 12 21.25C17.523 21.25 22 17.105 22 12C22 6.895 17.523 2 12 2Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 data-lang="pt">Agente Malaquias — Start Odonto</h3>
+        <h3 data-lang="en" style="display:none;">Malaquias Agent — Start Odonto</h3>
+
+        <div class="card-desc-short">
+          <p data-lang="pt">Agente de IA no WhatsApp que qualifica leads e agenda reuniões automaticamente para uma empresa de clínicas odontológicas.</p>
+          <p data-lang="en" style="display:none;">WhatsApp AI agent that automatically qualifies leads and books meetings for a dental-clinic growth company.</p>
+        </div>
+        <div class="card-desc-full" style="display:none;">
+          <p data-lang="pt">Agente de IA no WhatsApp construído em n8n para uma empresa de crescimento de clínicas odontológicas. Usa Postgres para memória de conversa e Redis como buffer de mensagens, consultando dados de leads direto de um formulário de mentoria para qualificar e agendar reuniões automaticamente.</p>
+          <p data-lang="en" style="display:none;">WhatsApp AI sales agent built in n8n for a dental-clinic growth company. Uses Postgres for chat memory and Redis as a message buffer, pulling lead data straight from a mentorship form to qualify leads and book meetings automatically.</p>
+        </div>
+
+        <button class="ver-mais" data-lang="pt" onclick="openModal(this)">Ver mais</button>
+        <button class="ver-mais" data-lang="en" style="display:none;" onclick="openModal(this)">Show more</button>
+
+        <div class="card-links">
+          <a href="mailto:mateusotavio614@gmail.com?subject=Agente%20Malaquias" target="_blank" data-lang="pt">Ver Projeto</a>
+          <a href="mailto:mateusotavio614@gmail.com?subject=Malaquias%20Agent" target="_blank" data-lang="en" style="display:none;">Ver Projeto</a>
+        </div>
+      </div>
+
+      <!-- Projeto 3 - Julio's Stamparia -->
+      <div class="card">
+        <div class="carousel">
+          <div class="slides">
+            <img src="./Images/Login.png" alt="">
+            <img src="./Images/Register.png" alt="">
+            <img src="./Images/Pers..png" alt="">
+            <img src="./Images/Login.png" alt="">
+          </div>
+        </div>
+        <h3>Julio's Stamparia</h3>
+
+        <div class="card-desc-short">
+          <p data-lang="pt">Loja online de roupas personalizadas, com autenticação, catálogo e pedidos conectados ao Supabase.</p>
+          <p data-lang="en" style="display:none;">Online store for customized clothing, with authentication, a catalog, and orders connected to Supabase.</p>
+        </div>
+        <div class="card-desc-full" style="display:none;">
+          <p data-lang="pt">Loja online de roupas personalizadas que venho construindo como projeto pessoal. Os usuários criam conta, navegam o catálogo de produtos e fazem pedidos — autenticação, catálogo e pedidos ficam armazenados no Supabase.</p>
+          <p data-lang="en" style="display:none;">Online store for customized clothing I've been building as a personal project. Users create an account, browse the product catalog, and place orders — authentication, catalog, and orders are all stored in Supabase.</p>
+        </div>
+
+        <button class="ver-mais" data-lang="pt" onclick="openModal(this)">Ver mais</button>
+        <button class="ver-mais" data-lang="en" style="display:none;" onclick="openModal(this)">Show more</button>
+
+        <div class="card-links">
+          <a href="https://matheusmalaquias.github.io/College-Projects/MyThings/Julio's%20Stamparia/Login.html" target="_blank" data-lang="pt">Ver Projeto</a>
+          <a href="https://matheusmalaquias.github.io/College-Projects/MyThings/Julio's%20Stamparia/Login.html" target="_blank" data-lang="en" style="display:none;">View Project</a>
+        </div>
+      </div>
+
+      <!-- Projeto 4 -->
       <div class="card">
         <div class="carousel">
           <div class="slides">
@@ -89,14 +180,25 @@
         <h3 data-lang="pt">Website institucional de turismo</h3>
         <h3 data-lang="en" style="display:none;">Tourism institutional website</h3>
 
-        <p data-lang="pt">Site responsivo em HTML/CSS para uma empresa fictícia de rafting.</p>
-        <p data-lang="en" style="display:none;">Responsive HTML/CSS website for a fictional rafting company.</p>
+        <div class="card-desc-short">
+          <p data-lang="pt">Site responsivo em HTML e CSS criado para uma empresa fictícia de rafting.</p>
+          <p data-lang="en" style="display:none;">Responsive HTML and CSS website built for a fictional whitewater-rafting company.</p>
+        </div>
+        <div class="card-desc-full" style="display:none;">
+          <p data-lang="pt">Projeto acadêmico do curso de Desenvolvimento Web na BYU-Idaho: um site institucional responsivo em HTML e CSS para uma empresa fictícia de rafting, com página inicial, galeria de passeios e formulário de contato.</p>
+          <p data-lang="en" style="display:none;">Academic project for a Web Development course at BYU-Idaho: a responsive HTML and CSS institutional website for a fictional rafting company, with a home page, tour gallery, and contact form.</p>
+        </div>
 
-        <a href="https://matheusmalaquias.github.io/wdd130/wwr/index.html" target="_blank" data-lang="pt">Ver Projeto</a>
-        <a href="https://matheusmalaquias.github.io/wdd130/wwr/index.html" target="_blank" data-lang="en" style="display:none;">View Project</a>
+        <button class="ver-mais" data-lang="pt" onclick="openModal(this)">Ver mais</button>
+        <button class="ver-mais" data-lang="en" style="display:none;" onclick="openModal(this)">Show more</button>
+
+        <div class="card-links">
+          <a href="https://matheusmalaquias.github.io/wdd130/wwr/index.html" target="_blank" data-lang="pt">Ver Projeto</a>
+          <a href="https://matheusmalaquias.github.io/wdd130/wwr/index.html" target="_blank" data-lang="en" style="display:none;">View Project</a>
+        </div>
       </div>
 
-      <!-- Projeto 2 -->
+      <!-- Projeto 5 -->
       <div class="card">
         <div class="carousel">
           <div class="slides">
@@ -109,54 +211,22 @@
         <h3 data-lang="pt">Quiz Interativo</h3>
         <h3 data-lang="en" style="display:none;">Interactive Quiz</h3>
 
-        <p data-lang="pt">Formulário com validação e perguntas interativas em HTML/CSS.</p>
-        <p data-lang="en" style="display:none;">Form with validation and interactive questions built in HTML/CSS.</p>
-
-        <a href="https://matheusmalaquias.github.io/College-Projects/MyThings/English/English.html" target="_blank" data-lang="pt">Ver Projeto</a>
-        <a href="https://matheusmalaquias.github.io/College-Projects/MyThings/English/English.html" target="_blank" data-lang="en" style="display:none;">View Project</a>
-      </div>
-
-      <!-- Projeto 3 -->
-      <div class="card">
-        <div class="carousel">
-          <div class="slides">
-            <img src="./Images/Login.png" alt="">
-            <img src="./Images/Register.png" alt="">
-            <img src="./Images/Pers..png" alt="">
-            <img src="./Images/Login.png" alt="">
-          </div>
+        <div class="card-desc-short">
+          <p data-lang="pt">Formulário com validação e perguntas interativas, construído em HTML e CSS.</p>
+          <p data-lang="en" style="display:none;">Interactive form with validation and quiz questions, built with HTML and CSS.</p>
         </div>
-        <h3 data-lang="pt">Loja de personalização online</h3>
-        <h3 data-lang="en" style="display:none;">Online customization store</h3>
-
-        <p data-lang="pt">Página de apresentação pessoal com navegação e customização.</p>
-        <p data-lang="en" style="display:none;">Personal portfolio page with navigation and customization options.</p>
-
-        <a href="https://matheusmalaquias.github.io/College-Projects/MyThings/Julio's%20Stamparia/Login.html" target="_blank" data-lang="pt">Ver Projeto</a>
-        <a href="https://matheusmalaquias.github.io/College-Projects/MyThings/Julio's%20Stamparia/Login.html" target="_blank" data-lang="en" style="display:none;">View Project</a>
-      </div>
-
-      <!-- Projeto 4 -->
-      <div class="card">
-        <div class="carousel">
-          <div class="slides">
-            <img src="./Images/Synaptech.png" alt="">
-            <img src="./Images/Image1.png" alt="">
-            <img src="./Images/Image2.png" alt="">
-            <img src="./Images/Image3.png" alt="">
-            <img src="./Images/Image4.png" alt="">
-            <img src="./Images/Image5.png" alt="">
-            <img src="./Images/Image6.png" alt="">
-          </div>
+        <div class="card-desc-full" style="display:none;">
+          <p data-lang="pt">Projeto acadêmico com um formulário interativo em HTML e CSS, incluindo validação de campos em tempo real e perguntas dinâmicas para praticar inglês.</p>
+          <p data-lang="en" style="display:none;">Academic project with an interactive HTML and CSS form, including real-time field validation and dynamic questions for English practice.</p>
         </div>
-        <h3 data-lang="pt">Synaptech</h3>
-        <h3 data-lang="en" style="display:none;">Synaptech</h3>
 
-        <p data-lang="pt">Página de apresentação pessoal com navegação e customização.</p>
-        <p data-lang="en" style="display:none;">Personal portfolio page with navigation and customization options.</p>
+        <button class="ver-mais" data-lang="pt" onclick="openModal(this)">Ver mais</button>
+        <button class="ver-mais" data-lang="en" style="display:none;" onclick="openModal(this)">Show more</button>
 
-        <a href="https://matheusmalaquias.github.io/College-Projects/MyThings/Julio's%20Stamparia/Login.html" target="_blank" data-lang="pt">Ver Projeto</a>
-        <a href="https://matheusmalaquias.github.io/College-Projects/MyThings/Julio's%20Stamparia/Login.html" target="_blank" data-lang="en" style="display:none;">View Project</a>
+        <div class="card-links">
+          <a href="https://matheusmalaquias.github.io/College-Projects/MyThings/English/English.html" target="_blank" data-lang="pt">Ver Projeto</a>
+          <a href="https://matheusmalaquias.github.io/College-Projects/MyThings/English/English.html" target="_blank" data-lang="en" style="display:none;">View Project</a>
+        </div>
       </div>
     </div>
   </section>
@@ -168,6 +238,10 @@
       <div class="tech-icons">
         <i class="devicon-python-plain colored"></i>
         <span>Python</span>
+      </div>
+      <div class="tech-icons">
+        <i class="devicon-javascript-plain colored"></i>
+        <span>JavaScript</span>
       </div>
       <div class="tech-icons">
         <i class="devicon-html5-plain colored"></i>
@@ -182,7 +256,11 @@
         <span>C#</span>
       </div>
       <div class="tech-icons">
-        <i class="devicon-sql-plain colored"></i>
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;">
+          <ellipse cx="12" cy="5" rx="8" ry="3" stroke="white" stroke-width="1.6"/>
+          <path d="M4 5V19C4 20.6569 7.58172 22 12 22C16.4183 22 20 20.6569 20 19V5" stroke="white" stroke-width="1.6"/>
+          <path d="M4 12C4 13.6569 7.58172 15 12 15C16.4183 15 20 13.6569 20 12" stroke="white" stroke-width="1.6"/>
+        </svg>
         <span>SQL</span>
       </div>
     </div>
@@ -215,8 +293,22 @@
     </div>
   </footer>
 
+  <!-- Modal de detalhes do projeto -->
+  <div id="project-modal" class="modal-overlay" onclick="closeModalOnOverlay(event)">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()" aria-label="Fechar">&times;</button>
+      <div id="modal-visual"></div>
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <div id="modal-links"></div>
+    </div>
+  </div>
+
   <!-- Script de idioma -->
   <script src="./Scripts/language.js"></script>
+
+  <!-- Modal "Ver mais" dos projetos -->
+  <script src="./Scripts/cards.js"></script>
 
   <!-- Botão de modo claro/escuro -->
   <button id="theme-toggle" class="theme-toggle">🌙</button>
