@@ -1,0 +1,110 @@
+/* ===== Botões compartilhados ===== */
+.button {
+  position: relative;
+  padding: 0.75rem 1.4rem;
+  border: none;
+  background-color: var(--cor-primaria);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--raio-pill);
+  cursor: pointer;
+  overflow: hidden;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: var(--sombra-sm);
+}
+
+.button:hover {
+  background-color: var(--cor-primaria-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--sombra-md);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+a.button {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.button-liquid {
+  position: relative;
+  display: inline-block;
+  padding: 0.75rem 1.6rem;
+  border: none;
+  border-radius: var(--raio-pill);
+  background: var(--cor-primaria);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: var(--sombra-sm);
+  transition: color 0.2s ease, background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.button-liquid:hover {
+  color: #fff;
+  background: var(--cor-primaria-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--sombra-md);
+}
+
+.button-liquid:active {
+  transform: translateY(0);
+}
+
+.button-liquid:disabled {
+  background: #c7c7d1;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.button-liquid::before,
+.button-liquid::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 45%;
+  animation: liquid-move 6s linear infinite;
+  z-index: 0;
+}
+
+.button-liquid::after {
+  animation-delay: -3s;
+}
+
+@keyframes liquid-move {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.button-liquid .btn-txt,
+.button-liquid .liquid {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Mensagens de feedback (erro/sucesso) ===== */
+.form-feedback {
+  min-height: 1.2rem;
+  font-size: 0.9rem;
+  margin-top: -0.3rem;
+}
+
+.form-feedback.erro {
+  color: var(--cor-perigo);
+}
+
+.form-feedback.sucesso {
+  color: var(--cor-sucesso);
+}

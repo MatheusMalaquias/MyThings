@@ -1,0 +1,36 @@
+/* ===== Menu de navegação do topo (compartilhado) ===== */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--cor-texto-suave);
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--raio-pill);
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.site-nav a:hover {
+  color: var(--cor-primaria);
+  background: var(--cor-primaria-fraca);
+}
+
+.site-nav a.ativo {
+  color: var(--cor-primaria);
+  background: var(--cor-primaria-fraca);
+}
+
+.site-nav a.admin-link {
+  color: #b45309;
+}
+
+.site-nav a.admin-link:hover,
+.site-nav a.admin-link.ativo {
+  color: #b45309;
+  background: #fffbeb;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Administração - Julio's Stamparia</title>
+  <link rel="stylesheet" href="./Styles/tokens.css" />
+  <link rel="stylesheet" href="./Styles/Buttons.css" />
+  <link rel="stylesheet" href="./Styles/Nav.css" />
+  <link rel="stylesheet" href="./Styles/Admin.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-personalizar">
+      <a href="Products.html">
+        <img src="./Images/Julio's Logo.png" alt="Julio's Stamparia Logo" class="site-logo" />
+      </a>
+      <nav class="site-nav">
+        <a href="Products.html">Produtos</a>
+        <a href="Personalizar.html">Personalizar</a>
+        <a href="Admin.html" class="admin-link">Painel Admin</a>
+      </nav>
+    </div>
+    <div class="header-actions">
+      <button class="logout-admin-btn" onclick="logout()">Sair</button>
+    </div>
+  </header>
+
+  <main class="admin-container">
+    <h2>Cadastrar nova roupa</h2>
+
+    <form id="admin-produto-form" novalidate>
+      <input type="text" id="admin-nome" placeholder="Nome da peça" required />
+      <input type="number" id="admin-preco" placeholder="Preço (ex: 79.90)" step="0.01" min="0" required />
+
+      <select id="admin-genero" required>
+        <option value="Masculino">Masculino</option>
+        <option value="Feminino">Feminino</option>
+        <option value="Unissex">Unissex</option>
+      </select>
+
+      <label class="admin-label">Imagem da peça</label>
+      <input type="file" id="admin-imagem" accept="image/*" />
+
+      <label class="admin-label">Descrição (aparece no "Ver mais" do cliente)</label>
+      <textarea id="admin-descricao" rows="3" placeholder="Ex: 100% algodão, corte reto, estampa exclusiva..."></textarea>
+
+      <p id="admin-feedback" class="form-feedback" role="alert"></p>
+      <button type="submit" class="button-liquid">Cadastrar peça</button>
+    </form>
+
+    <h2>Roupas cadastradas</h2>
+    <div id="admin-lista-produtos"></div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./Scripts/supabaseConfig.js"></script>
+  <script src="./Scripts/Nav.js"></script>
+  <script src="./Scripts/Admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: var(--fonte);
+  background-color: var(--cor-fundo);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  background: var(--cor-superficie);
+  padding: 2.5rem;
+  border-radius: var(--raio-lg);
+  box-shadow: var(--sombra-md);
+  margin: 2.5rem 1.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.personalizacao,
+.pedido {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.personalizacao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.personalizacao h2 {
+  margin-bottom: 0.5rem;
+}
+
+.pedido {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.pedido input,
+.pedido select,
+.pedido textarea {
+  padding: 0.75rem 0.9rem;
+  font-size: 1rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-sm);
+  font-family: inherit;
+  width: 100%;
+  background: var(--cor-fundo);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pedido input:focus,
+.pedido select:focus,
+.pedido textarea:focus {
+  outline: none;
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 0 3px var(--cor-primaria-fraca);
+  background: var(--cor-superficie);
+}
+
+.shirt-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 1rem;
+  touch-action: none;
+}
+
+#imageUpload {
+  font-size: 0.9rem;
+}
+
+.shirt {
+  width: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  cursor: grab;
+  border: 1px dashed transparent;
+}
+
+.overlay-image:active {
+  cursor: grabbing;
+}
+
+/* ===== Cabeçalho ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--cor-superficie);
+  padding: 0.8rem 2rem;
+  border-bottom: 1px solid var(--cor-borda);
+  z-index: 1000;
+}
+
+.site-logo {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+}

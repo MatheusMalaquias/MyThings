@@ -1,0 +1,27 @@
+/* ===== Design tokens — Julio's Stamparia =====
+   Carregue este arquivo ANTES dos outros CSS em cada página. */
+:root {
+  --cor-primaria: #4f46e5;
+  --cor-primaria-hover: #4338ca;
+  --cor-primaria-fraca: #eef2ff;
+  --cor-perigo: #ef4444;
+  --cor-perigo-hover: #dc2626;
+  --cor-sucesso: #16a34a;
+
+  --cor-fundo: #f7f7fb;
+  --cor-superficie: #ffffff;
+  --cor-texto: #1e1b2e;
+  --cor-texto-suave: #6b7280;
+  --cor-borda: #e5e7eb;
+
+  --raio-sm: 8px;
+  --raio-md: 14px;
+  --raio-lg: 22px;
+  --raio-pill: 999px;
+
+  --sombra-sm: 0 1px 3px rgba(17, 12, 46, 0.06);
+  --sombra-md: 0 8px 24px rgba(17, 12, 46, 0.08);
+  --sombra-lg: 0 16px 40px rgba(17, 12, 46, 0.12);
+
+  --fonte: 'Be Vietnam Pro', sans-serif;
+}

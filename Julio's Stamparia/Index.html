@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Entre na sua conta Julio's Stamparia para ver roupas e personalizar suas peças." />
+  <meta name="author" content="Julio's Stamparia" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&family=Trade+Winds&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./Styles/tokens.css" />
+  <link rel="stylesheet" href="./Styles/Buttons.css" />
+  <link rel="stylesheet" href="./Styles/Auth.css" />
+  <title>Entrar - Julio's Stamparia</title>
+</head>
+
+<body>
+  <main>
+    <header>
+      <img src="./Images/Julio's Logo.png" alt="Julio's Stamparia logo" />
+    </header>
+
+    <form id="login-form" novalidate>
+      <input type="email" placeholder="E-mail" id="login-email" required />
+      <input type="password" placeholder="Senha" id="login-password" required minlength="6" />
+      <p id="login-feedback" class="form-feedback" role="alert"></p>
+      <button type="submit" class="button">
+        <span class="liquid"></span>
+        <span class="btn-txt">Entrar</span>
+      </button>
+    </form>
+
+    <p>Não tem conta?</p>
+    <a href="Register.html" class="button">
+      <span class="liquid"></span>
+      <span class="btn-txt">Registrar</span>
+    </a>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./Scripts/supabaseConfig.js"></script>
+  <script src="./Scripts/Auth.js"></script>
+</body>
+</html>

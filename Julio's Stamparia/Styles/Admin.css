@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte);
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--cor-superficie);
+  padding: 0.8rem 2rem;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.logo-personalizar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.site-logo {
+  height: 50px;
+}
+
+.logout-admin-btn {
+  background: none;
+  color: var(--cor-perigo);
+  border: 1px solid var(--cor-perigo);
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--raio-pill);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.logout-admin-btn:hover {
+  background: var(--cor-perigo);
+  color: white;
+}
+
+.admin-container {
+  max-width: 640px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.admin-container h2 {
+  margin: 1.5rem 0 1rem;
+  color: var(--cor-texto);
+}
+
+#admin-produto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  background: var(--cor-superficie);
+  padding: 1.75rem;
+  border-radius: var(--raio-lg);
+  box-shadow: var(--sombra-sm);
+}
+
+#admin-produto-form input,
+#admin-produto-form select,
+#admin-produto-form textarea {
+  padding: 0.75rem 0.9rem;
+  font-size: 1rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-sm);
+  font-family: inherit;
+  background: var(--cor-fundo);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#admin-produto-form input:focus,
+#admin-produto-form select:focus,
+#admin-produto-form textarea:focus {
+  outline: none;
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 0 3px var(--cor-primaria-fraca);
+  background: var(--cor-superficie);
+}
+
+.admin-label {
+  font-size: 0.85rem;
+  color: var(--cor-texto-suave);
+}
+
+.admin-produto-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--cor-superficie);
+  padding: 0.9rem 1.1rem;
+  border-radius: var(--raio-md);
+  box-shadow: var(--sombra-sm);
+  margin-bottom: 0.7rem;
+}
+
+.admin-produto-item img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  border-radius: var(--raio-sm);
+  background: var(--cor-fundo);
+}
+
+.admin-produto-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-produto-info span {
+  font-size: 0.85rem;
+  color: var(--cor-texto-suave);
+}
+
+.admin-remover-btn {
+  background: none;
+  border: 1px solid var(--cor-perigo);
+  color: var(--cor-perigo);
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--raio-pill);
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.admin-remover-btn:hover {
+  background: var(--cor-perigo);
+  color: white;
+}
+
+.carrinho-vazio {
+  font-size: 0.9rem;
+  color: var(--cor-texto-suave);
+  text-align: center;
+  padding: 0.6rem 0;
+}
