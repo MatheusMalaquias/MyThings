@@ -211,7 +211,7 @@ async function finalizarPedido(session) {
 
 async function logout() {
   await supabaseClient.auth.signOut();
-  window.location.href = 'index.html';
+  window.location.href = 'Index.html';
 }
 
 // Delegação de evento: funciona mesmo se algo mais na página falhar,
@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const { data: { session } } = await supabaseClient.auth.getSession();
   if (!session) {
     alert('Faça login para acessar os produtos.');
-    window.location.href = 'index.html';
+    window.location.href = 'Index.html';
     return;
   }
 

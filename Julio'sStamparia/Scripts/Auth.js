@@ -75,12 +75,12 @@ if (registerForm) {
       'Conta criada! Se a confirmação por e-mail estiver ativada no seu projeto, verifique sua caixa de entrada antes de entrar.',
       'sucesso'
     );
-    setTimeout(() => { window.location.href = 'index.html'; }, 2800);
+    setTimeout(() => { window.location.href = 'Index.html'; }, 2800);
   });
 }
 
 // ===== Logout (usado em Products.html) =====
 async function logout() {
   await supabaseClient.auth.signOut();
-  window.location.href = 'index.html';
+  window.location.href = 'Index.html';
 }

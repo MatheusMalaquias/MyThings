@@ -117,13 +117,13 @@ form.addEventListener('submit', async function (e) {
 
 async function logout() {
   await supabaseClient.auth.signOut();
-  window.location.href = 'index.html';
+  window.location.href = 'Index.html';
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
   const { data: { session } } = await supabaseClient.auth.getSession();
   if (!session) {
-    window.location.href = 'index.html';
+    window.location.href = 'Index.html';
     return;
   }
 
