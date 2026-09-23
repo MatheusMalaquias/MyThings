@@ -26,7 +26,7 @@ body {
 }
 
 .site-logo {
-  height: 50px;
+  height: 64px;
 }
 
 .logout-admin-btn {
@@ -137,6 +137,47 @@ body {
 .admin-remover-btn:hover {
   background: var(--cor-perigo);
   color: white;
+}
+
+.admin-produto-acoes {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.admin-editar-btn {
+  background: none;
+  border: 1px solid var(--cor-primaria);
+  color: var(--cor-primaria);
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--raio-pill);
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.admin-editar-btn:hover {
+  background: var(--cor-primaria);
+  color: white;
+}
+
+.admin-form-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.admin-cancelar-btn {
+  background: none;
+  border: none;
+  color: var(--cor-texto-suave);
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-decoration: underline;
+}
+
+.admin-cancelar-btn:hover {
+  color: var(--cor-texto);
 }
 
 .carrinho-vazio {

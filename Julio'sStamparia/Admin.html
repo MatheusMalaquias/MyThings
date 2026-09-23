@@ -46,7 +46,10 @@
       <textarea id="admin-descricao" rows="3" placeholder="Ex: 100% algodão, corte reto, estampa exclusiva..."></textarea>
 
       <p id="admin-feedback" class="form-feedback" role="alert"></p>
-      <button type="submit" class="button-liquid">Cadastrar peça</button>
+      <div class="admin-form-actions">
+        <button type="submit" class="button-liquid" id="admin-submit-btn">Cadastrar peça</button>
+        <button type="button" id="admin-cancelar-btn" class="admin-cancelar-btn" style="display:none;">Cancelar edição</button>
+      </div>
     </form>
 
     <h2>Roupas cadastradas</h2>

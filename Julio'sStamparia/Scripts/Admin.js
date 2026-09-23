@@ -1,10 +1,16 @@
 /**
- * Admin.js — cadastro/remoção de produtos, restrito a quem está na tabela
- * `admins` do Supabase. Requer ./Scripts/supabaseConfig.js carregado antes.
+ * Admin.js — cadastro, edição e remoção de produtos, restrito a quem está
+ * na tabela `admins` do Supabase. Requer ./Scripts/Supabaseconfig.js
+ * carregado antes.
  */
 
 const form = document.getElementById('admin-produto-form');
 const lista = document.getElementById('admin-lista-produtos');
+const botaoSubmit = document.getElementById('admin-submit-btn');
+const botaoCancelar = document.getElementById('admin-cancelar-btn');
+
+let editandoId = null;
+let editandoImagemAtual = null;
 
 function mostrarFeedback(mensagem, tipo) {
   const el = document.getElementById('admin-feedback');
@@ -42,7 +48,10 @@ async function carregarLista() {
           <strong>${p.nome}</strong>
           <span>${formatarPreco(p.preco)} · ${p.genero}</span>
         </div>
-        <button type="button" class="admin-remover-btn" data-id="${p.id}">Remover</button>
+        <div class="admin-produto-acoes">
+          <button type="button" class="admin-editar-btn" data-id="${p.id}">Editar</button>
+          <button type="button" class="admin-remover-btn" data-id="${p.id}">Remover</button>
+        </div>
       </div>`
     )
     .join('');
@@ -50,7 +59,40 @@ async function carregarLista() {
   lista.querySelectorAll('.admin-remover-btn').forEach(btn => {
     btn.addEventListener('click', () => removerProduto(btn.dataset.id));
   });
+
+  lista.querySelectorAll('.admin-editar-btn').forEach(btn => {
+    const produto = produtos.find(p => String(p.id) === btn.dataset.id);
+    btn.addEventListener('click', () => iniciarEdicao(produto));
+  });
 }
+
+function iniciarEdicao(produto) {
+  editandoId = produto.id;
+  editandoImagemAtual = produto.imagem_url || null;
+
+  document.getElementById('admin-nome').value = produto.nome || '';
+  document.getElementById('admin-preco').value = produto.preco || '';
+  document.getElementById('admin-genero').value = produto.genero || 'Masculino';
+  document.getElementById('admin-descricao').value = produto.descricao || '';
+  document.getElementById('admin-imagem').value = '';
+
+  botaoSubmit.textContent = 'Salvar alterações';
+  botaoCancelar.style.display = 'inline-block';
+  mostrarFeedback(`Editando "${produto.nome}" — escolha uma nova imagem só se quiser trocá-la.`, 'info');
+
+  form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function cancelarEdicao() {
+  editandoId = null;
+  editandoImagemAtual = null;
+  form.reset();
+  botaoSubmit.textContent = 'Cadastrar peça';
+  botaoCancelar.style.display = 'none';
+  mostrarFeedback('', '');
+}
+
+botaoCancelar.addEventListener('click', cancelarEdicao);
 
 async function removerProduto(id) {
   if (!confirm('Remover essa peça do catálogo?')) return;
@@ -60,6 +102,7 @@ async function removerProduto(id) {
     alert('Erro ao remover: ' + error.message);
     return;
   }
+  if (editandoId === id) cancelarEdicao();
   carregarLista();
 }
 
@@ -71,13 +114,12 @@ form.addEventListener('submit', async function (e) {
   const genero = document.getElementById('admin-genero').value;
   const descricao = document.getElementById('admin-descricao').value.trim();
   const arquivo = document.getElementById('admin-imagem').files[0];
-  const botao = form.querySelector('button[type="submit"]');
 
-  botao.disabled = true;
-  botao.textContent = 'Cadastrando...';
+  botaoSubmit.disabled = true;
+  botaoSubmit.textContent = editandoId ? 'Salvando...' : 'Cadastrando...';
 
   try {
-    let imagemUrl = null;
+    let imagemUrl = editandoId ? editandoImagemAtual : null;
 
     if (arquivo) {
       const nomeArquivo = `${Date.now()}-${arquivo.name}`;
@@ -94,24 +136,38 @@ form.addEventListener('submit', async function (e) {
       imagemUrl = urlData.publicUrl;
     }
 
-    const { error: erroInsert } = await supabaseClient.from('produtos').insert({
+    const payload = {
       nome,
       preco,
       genero,
       descricao: descricao || null,
       imagem_url: imagemUrl
-    });
+    };
 
-    if (erroInsert) throw erroInsert;
+    if (editandoId) {
+      const { error: erroUpdate } = await supabaseClient
+        .from('produtos')
+        .update(payload)
+        .eq('id', editandoId);
 
-    mostrarFeedback('Peça cadastrada com sucesso!', 'sucesso');
-    form.reset();
+      if (erroUpdate) throw erroUpdate;
+
+      mostrarFeedback('Peça atualizada com sucesso!', 'sucesso');
+      cancelarEdicao();
+    } else {
+      const { error: erroInsert } = await supabaseClient.from('produtos').insert(payload);
+      if (erroInsert) throw erroInsert;
+
+      mostrarFeedback('Peça cadastrada com sucesso!', 'sucesso');
+      form.reset();
+    }
+
     carregarLista();
   } catch (err) {
-    mostrarFeedback('Erro ao cadastrar: ' + err.message, 'erro');
+    mostrarFeedback('Erro ao salvar: ' + err.message, 'erro');
   } finally {
-    botao.disabled = false;
-    botao.textContent = 'Cadastrar peça';
+    botaoSubmit.disabled = false;
+    botaoSubmit.textContent = editandoId ? 'Salvar alterações' : 'Cadastrar peça';
   }
 });
 

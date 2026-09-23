@@ -108,3 +108,7 @@ a.button {
 .form-feedback.sucesso {
   color: var(--cor-sucesso);
 }
+
+.form-feedback.info {
+  color: var(--cor-primaria);
+}
